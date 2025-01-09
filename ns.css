@@ -1,0 +1,669 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.5;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+/* Header */
+header {
+    padding: 2rem;
+    background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+header nav a {
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+header nav a:hover {
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+    animation: fadeIn 3s ease-out;
+}
+
+/* Image Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Section with Gradients */
+.section-gradient {
+    background: linear-gradient(145deg, #f06, #ff9a9e);
+    padding: 4rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: pulse 5s infinite;
+}
+
+.section-gradient h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.section-gradient p {
+    font-size: 1.1rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    background: linear-gradient(145deg, #ff6f61, #ff4e50);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #333;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+.newwebpage
+{
+  background-color: "green";
+}
+color
+p{
+background-color= "sepia";
+background-color: "sepia";
+}
+h{
+  text-color=""brown" ;
+  text-decoration-style:"brown" ;
+  text-decoration-color: 
+}
+section
+{
+  background-color: " drark violet ";
+}
+.h1 
+{ 
+  font-colour : "gray"; 
+  text-color:" brown";
+}
+.p
+{
+  
+  font-size: "56";
+   font-color:"gray";
+  touch-action:"  ";
+  text-decoration-color:"chrome";
+  list-style-image: " ";
+  vertical-align: "15";
+  text-color "yellow";
+}
+</style>
+
+ <style>
+  
+header 
+{
+  image1 
+  {
+    align-items: "left";
+    animation-play-state:"blend";
+    block-size: "80%";
+    border-block-end-width: "70px";
+    ;
+    size = 100% ;
+    width = 100% ;
+    height= 100%;
+    animation-iteration-count: 3;
+    animation-name: "align";
+    animation: "glide";
+    
+}
+  image2
+  {
+    animation:"glide";
+    animation-iteration-count:10;
+    image-size= "80%";
+    border-top-right-radius: "90px";
+    border-inline-end-style: " ";
+    block-size: "80%";
+    animation-fill-mode: "glitter";
+    size= 100%;
+    visibility:"90%";
+  }
+  image3
+  { 
+    animation : "fade-in";
+    animation-direction: "right";
+    caret-color: "violet";
+    canvas-size : "80%";
+    size = 100%;
+    block-size:"600px";
+    visibility: "100%";
+  }
+}
+}
+  h 
+  { 
+    text-decoration-style:"red";
+    border-block-end:" " ;
+    animation-duration: "30 sec";
+    vertical-align: "center";
+    min-height: "60px";
+    text-decoration-line: 89px;
+    
+  }
+  .header
+  { 
+    box-sizing: " 80";
+    background-size: "0";
+    font-variant-ligatures: 
+    min-block-size: " ";
+  }
+    image1 
+    {
+      w
+      border-top-color: "orange";
+      align-self: "center";
+      animation-fill-mode: " blur" ; 
+      animation-play-state: " ";
+      "user";
+      align-self: " center" ;
+      flex-direction
+      " center";
+      font-language-override: "times new roman";
+      width:100%;
+height :100%;
+  }
+  canvas{}
+
+   canvas{
+     
+   } 
+  }
+  canvas:"root";
+  {
+    
+  }
+    content= " n3";
+    
+</section>
+
+    <section id ="games">
+        <h2>Games</h2>
+</style>
+    
+.section
+{
+  align-items: " self align ";
+  align-self: :"self align ";
+}
+    
+.p
+ { 
+  align-items:"self align ";
+}
+animation-name : animation: "glide ";
+
+</code>
+
+<nav>  
+.h{
+  background: "gray";
+  border-bottom-style: "green";
+}
+header 
+{
+  color-adjust: "fade = 100%";
+  ;
+  
+}
+.p
+{
+  background-color: "sepia";
+}
+
+<script>/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+header 
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin-left: 20px;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+nav ul li {
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ffd700;
+}
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 30px;
+}
+h {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.sftware{
+    background-color: #ffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.tomb raider img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.fnal fantasy h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.drakon kall  p {
+    color: #666;
+    margin-bottom: 15px;
+}
+.game button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.game button:hover {
+    background-color: #45a049;
+}
+#game-screen {
+    background-color: #ccc;
+    height: 400px; /* Adjust height as needed */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+footer p {
+    margin: 0;
+}
+ </script>
+
+ <json>
+ {
+  "website":
+   {
+    "title": "My Gaming Profile",
+    "header": {
+      "title": "My Gaming Profile",
+      "nav": [
+        { "label": "About Me", "link": "#about" },
+        { "label": "Games", "link": "#games" },
+        { "label": "Gallery", "link": "#gallery" },
+        { "label": "Contact", "link": "#contact" }
+      ]
+    }
+    "sections": 
+     [
+     {
+        "id": "about",
+        "title": "About Me",
+        "content": "Welcome to my gaming profile! I'm a passionate gamer and streamer. Here you'll find information about my favorite games, achievements, and some awesome gaming moments."
+      },
+      {
+        "id": "games",
+        "title": "Games",
+        "list": [
+          "Game 1",
+          "Game 2",
+          "Game 3"
+        ]
+      }
+      
+      {
+        "id": "contact",
+        "title": "Contact",
+        "form": {
+          "fields": [
+            { "label": "Name", "type": "text", "id": "name", "name": "name", "required": true },
+            { "label": "Email", "type": "email", "id": "email", "name": "email", "required": true },
+            { "label": "Message", "type": "textarea", "id": "message", "name": "message", "required": true }
+          ],
+          "button": { "type": "submit", "label": "Send" }
+        }
+      }
+    ],
+    "footer": {
+      "content": "&copy; 2024 My Gaming Profile"
+    }
+  }
+}
+ sass styles.scss styles.css
+    $primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-stack: 'Arial, sans-serif';
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background-color: $primary-color;
+    color: white;
+    padding: 1rem 0;
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        li {
+            margin: 0 1rem;
+
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+area
+{
+  
+}
+section {
+  
+    padding: 2rem;
+    text-align: center;
+    margin: 1rem;
+
+    h2 {
+        color: $primary-color;
+    }
+    &.gallery {
+        display: flex;
+        justify-content: center;
+        gap: rem;
+        
+        img 
+      {
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+        margin: 0.5rem 0 0.2rem;
+    }
+    input, textarea {
+        width: 80%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: 1px solid $primary-color;
+        border-radius: 5px;
+    }
+    button {
+        padding: 0.5rem 1rem;
+        background-color: $secondary-color;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+}
+
+footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+body 
+{
+  offset-block-end: "56" ;
+  animation-timing-function: "67px";
+animation-fill-mode: "glow" ;
+  date
+  {
+    code
+    {
+      animation-iteration-count: "66";
+    }
+    }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
