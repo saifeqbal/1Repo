@@ -137,6 +137,84 @@ box shape ="rounded";
   <div id="dropzone" style="width:100%; height:100px; border:2px dashed #ccc; text-align:center; line-height:100px;">
   </div>
 </window>
+
+
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamers Table</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Gamers Table</h2>
+    <table id="gamersTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>logged in</th>
+                 <age>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be added dynamically using JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="gamers.js">
+// gamers.js
+
+// Sample data for gamers
+const gamers = [
+    { name: 'Alex', age: 25, favoriteGame: 'The Legend of Zelda' },
+    { name: 'Jamie', age: 30, favoriteGame: 'Fortnite' },
+    { name: 'Morgan', age: 22, favoriteGame: 'Minecraft' },
+    { name: 'Taylor', age: 27, favoriteGame: 'Overwatch' }
+];
+
+// Function to populate the table with gamers' data
+function populateGamersTable() {
+    const tableBody = document.querySelector('#gamersTable tbody');
+
+    gamers.forEach(gamer => {
+        const row = document.createElement('tr');
+
+        const nameCell = document.createElement('td');
+        nameCell.textContent = gamer.name;
+        row.appendChild(nameCell);
+
+        const ageCell = document.createElement('td');
+        ageCell.textContent = gamer.age;
+        row.appendChild(ageCell);
+
+        const gameCell = document.createElement('td');
+        gameCell.textContent = gamer.favoriteGame;
+        row.appendChild(gameCell);
+
+        tableBody.appendChild(row);
+    });
+}
+
+// Call the function to populate the table when the page loads
+document.addEventListener('DOMContentLoaded', populateGamersTable);
+</script>
   <div id = "footer">
     <a href="https://facebook.com">Facebook</a>
     <a href="https://instagram.com">Instagram</a>
@@ -167,7 +245,6 @@ dropzone.addEventListener('drop', (event) => {
 {
     background-color: brown;
   }
-
   </style>
 </body>
 </html>
