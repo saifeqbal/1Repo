@@ -7,6 +7,10 @@
 <body>
   <head>
     <div id="dialogbox" style="width: 35px; height: 55px; background-color: brown; border: solid 1px;">
+<div id="window-section">
+        <h1>Window Section</h1>
+        <button onclick="showDialog()">Open Dialog</button>
+    </div>
       <p> 
         to display games new installed
       </p>
@@ -39,24 +43,40 @@
   <h1>
     Hello, World!
   </h1>
+
   <head> 
     <h2> 
       the new games are way better
       ,please have more fun
     </h2>
   </head>
-  <footer>
+  <div id="dropzone" style="width:100%; height:100px; border:2px dashed #ccc; text-align:center; line-height:100px;">
+    
+  </div>
+  <div id = "footer">
     <a href="https://facebook.com">Facebook</a>
     <a href="https://instagram.com">Instagram</a>
     <a href="https://linkedin.com">LinkedIn</a>
     <a href="https://www.youtube.com">Youtube</a>
   </footer>
+
   <script>
   function onpress() {
-    console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']"));
+ console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']"));
     console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
   </script>
+<script>
+const dropzone = document.getElementById('dropzone');
+dropzone.addEventListener('dragover', (event) => {
+  event.preventDefault();
+});
+dropzone.addEventListener('drop', (event) => {
+  event.preventDefault();
+  const files = event.dataTransfer.files;
+  // Process the files here
+});>
+</script>
   <style>
   head {
     background-color: brown; 
@@ -64,6 +84,7 @@
   body {
     background-color: brown;
   }
+
   </style>
 </body>
 </html>
