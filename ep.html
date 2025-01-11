@@ -6,65 +6,64 @@
 </head>
 <body>
   <head>
-    <div id = "dialogbox ", width= 35,height = "55" ,style= bgcolor = "brown" , border = "solid" 1,2 > 
+    <div id="dialogbox" style="width: 35px; height: 55px; background-color: brown; border: solid 1px;">
       <p> 
         to display games new installed
       </p>
       <frame>
-        <img src = "Mecharena.jpg ",width= ",56 ",height ="56" , function = onpress() ; alt= "mecharena ">
-
+        <img src="Mecharena.jpg" width="56" height="56" onclick="onpress();" alt="mecharena">
         <text>Mecharena</text>
         </img>
-<p id ="text fordispalyof sidebars", text-size="40px",text-align="center", font-size="20px">
-          </p>
-      <form>
-        <table>
-          <col>
-          first game is about mech arena          
-        </col>
-          <td>
-            mecharenagamers
-          </td>
-          <td>
-           status
-          </td>  
-</table>
-        </table> 
-      </form>
+        <p id="text-for-display-of-sidebars" style="text-size: 40px; text-align: center; font-size: 20px;">
+        </p>
+        <form>
+          <table>
+            <col>
+              first game is about mech arena          
+            </col>
+            <td>
+              mecharenagamers
+            </td>
+            <td>
+              status
+            </td>  
+          </table>
+        </form>
         <wbr>
         <wbr>
-        <img src= "galaxiaga.jpg", function = onpress() ,  
-          width=40 ,height=40 border="solid",4,5; alt ="galaxiaga"/>
+        <img src="galaxiaga.jpg" onclick="onpress();" width="40" height="40" style="border: solid 4px 5px;" alt="galaxiaga"/>
         </img>
-         </iframe> 
+      </frame>
     </div>
   </head>
   <h1>
     Hello, World!
   </h1>
   <head> 
-    <h> 
+    <h2> 
       the new games are way better
- ,please have more fun
-      </h>
+      ,please have more fun
+    </h2>
   </head>
+  <footer>
+    <a href="https://facebook.com">Facebook</a>
+    <a href="https://instagram.com">Instagram</a>
+    <a href="https://linkedin.com">LinkedIn</a>
+    <a href="https://www.youtube.com">Youtube</a>
+  </footer>
   <script>
-  function onpress()
-  {
-console.log(document.getElementById(dialog Box,"mecharena.jpg");
-    console.log(" document.getElemenybyId(dialog_box,"galaxiaga.png")");
+  function onpress() {
+    console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']"));
+    console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
-</script>
+  </script>
   <style>
-head
-{
-bgcolor= "brown"; 
-}
-body 
-  {
-  bgcolor="brown";
-}
-</style>
-</head>
+  head {
+    background-color: brown; 
+  }
+  body {
+    background-color: brown;
+  }
+  </style>
 </body>
 </html>
