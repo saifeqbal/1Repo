@@ -109,8 +109,7 @@ box shape ="rounded";
             <td>
               Game name status
             </td>  
-<tr>
-game
+<tr>game
 </tr>
           </table>
         </form>
@@ -155,7 +154,7 @@ game
     </style>
 </head>
 <body>
-    <h2>Gamers Table</h2>
+    <h2></h2>
     <table id="gamersTable">
         <thead>
     <tr>
@@ -164,42 +163,31 @@ game
 </td>
 <tr><td>NAME OF GAME</td>
 </tr>
-        </thead>
-        <tbody>
-            <!-- Rows will be added dynamically using JavaScript -->
-        </tbody>
-    </table>
-
+     
     <script src="gamers.js">
 // gamers.js
-
 // Sample data for gamers
 const gamers = [
     { name: '', age: 25, favoriteGame: 'Galaxiaga'.  },
    ,
-    { name: '', age: 22, favoriteGame: 'mech Arena' },
+    { name: 'jonah', age: 22, favoriteGame: 'mech Arena' },
    }
 ];
 
 // Function to populate the table with gamers' data
 function populateGamersTable() {
     const tableBody = document.querySelector('#gamersTable tbody');
-
     gamers.forEach(gamer => {
         const row = document.createElement('tr');
-
         const nameCell = document.createElement('td');
         nameCell.textContent = gamer.name;
         row.appendChild(nameCell);
-
         const ageCell = document.createElement('td');
         ageCell.textContent = gamer.age;
         row.appendChild(ageCell);
-
         const gameCell = document.createElement('td');
         gameCell.textContent = gamer.favoriteGame;
         row.appendChild(gameCell);
-
         tableBody.appendChild(row);
     });
 }
@@ -215,9 +203,7 @@ document.addEventListener('DOMContentLoaded', populateGamersTable);
   <script>
   function onpress() { console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']")); console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
-
   </script>
-
 <script>
 const dropzone = document.getElementById('dropzone');
 dropzone.addEventListener('dragover', (event) => {
@@ -228,16 +214,20 @@ dropzone.addEventListener('drop', (event) => {
   const files = event.dataTransfer.files;
   // Process the files here
 });>
+
 </script>
+
   <style>
   head {
     background-color: brown; 
   }
+
   body 
 {
     background-color: brown;
   }
-  </style>
 
+  </style>
+</head >
 </body>
 </html>
