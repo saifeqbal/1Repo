@@ -109,9 +109,7 @@ method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
 </textarea>
             <button type="submit" font-color="brown ">Send
 </button>
-
         </form>
-
 <?php 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -121,6 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = htmlspecialchars($_POST['email']);
 ?>
     </section>
+
     <footer>
         <p>&copy; 2024 My Gaming Profile</p>
     </footer>
