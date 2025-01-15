@@ -22,7 +22,6 @@ header, footer {
 h1, h2, h3 {
     color: #333;
 }
-
 p {
     color: #666;
     line-height: 1.6;
@@ -62,7 +61,9 @@ bgolour: "blue";
 {
 
 }
-container {
+
+container 
+{
 box-size=30,30;
 box-style: "rounded"
 box-border= "rounded";
@@ -74,6 +75,7 @@ box shape ="rounded";
 }
 
 </style>
+
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title>a</title>
 </head>
@@ -83,17 +85,23 @@ box shape ="rounded";
 <div id="window-section">
         <h1>Window Section</h1>
         <button onclick="showDialog()">Open Dialog</button>
+
     </div>
-<div id="container", img="mech Arena.png", width=100,height=100, border="1,1", rounded, >
+
+<div id="container", img="mech Arena.png", width=100,height=100, border="1,1", rounded,>
 <img src="MechArena.jpg", alt="MechArena" width=100% ,height=100px>
 <img src ="Galaxiaga.png", alt= "Galaxiaga.png" width=100%, height=100px;>
+
 </div>
+
       <p> 
         to display games new installed
       </p>
+
       <frame>
         <img src="Mecharena.jpg", width="56" height="56" onclick="onpress();" alt="mecharena">
         <text>Mecharena</text>
+
         </img>
         <p id="text-for-display-of-sidebars" style="text-size: 40px; text-align: center; font-size: 20px;">
         </p>
@@ -110,7 +118,8 @@ box shape ="rounded";
             <td>
               Game name status
             </td>  
-<tr>game
+<tr> 
+game
 </tr>
           </table>
         </form>
@@ -148,12 +157,11 @@ box shape ="rounded";
         table, th, td {
             border: 1px solid black;
         }
-        th, td 
+        th,td 
 {
             padding: 10px;
             text-align: left;
         }
-
     </style>
 </head>
 <body>
@@ -166,7 +174,6 @@ box shape ="rounded";
 </td>
 <tr><td>NAME OF GAME</td>
 </tr>
-     
     <script src="gamers.js">
 // gamers.js
 // Sample data for gamers
@@ -204,32 +211,34 @@ document.addEventListener('DOMContentLoaded', populateGamersTable);
     <a href="https://www.youtube.com">Youtube</a>
   </div>
   <script>
-  function onpress() { console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']")); console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
+  function onpress() { 
+console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']")); console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
+
   </script>
+
 <script>
+
 const dropzone = document.getElementById('dropzone');
 dropzone.addEventListener('dragover', (event) => {
   event.preventDefault();
 });
-dropzone.addEventListener('drop', (event) => {
+
+dropzone.addEventListener('drop',(event) => {
   event.preventDefault();
   const files = event.dataTransfer.files;
   // Process the files here
 });>
 
 </script>
-
   <style>
   head {
     background-color: brown; 
   }
-
   body 
 {
     background-color: brown;
   }
-
   </style>
 </head >
 </body>
