@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer's Data Hat</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            margin: 0;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #34495e;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #2c3e50;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #2c3e50;
+        }
+
+        tr:hover {
+            background-color: #3498db;
+        }
+
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr { 
+                display: block; 
+            }
+
+            thead tr { 
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr { 
+                margin-bottom: 10px;
+            }
+
+            td { 
+                border: none;
+                position: relative;
+                padding-left: 50%; 
+            }
+
+            td:before { 
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                width: 45%; 
+                padding-right: 10px; 
+                white-space: nowrap;
+            }
+
+            td:nth-of-type(1):before { content: "Game"; }
+            td:nth-of-type(2):before { content: "Genre"; }
+            td:nth-of-type(3):before { content: "Platform"; }
+            td:nth-of-type(4):before { content: "Release Date"; }
+            td:nth-of-type(5):before { content: "Rating"; }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Gamer's Data Hub</h1>
+
+<div class="container">
+    <h2>Top Games of 2025</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>Genre</th>
+                <th>Platform</th>
+                <th>Release Date</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mech arena</td>
+                <td>Sci-Fi RPG</td>
+                <td>Android
+                    </td>
+                <td>Jan 15, 2024</td>
+                <td>9.4/10</td>
+            </tr>
+            <tr>
+                <td>Tekken</td>
+                <td>Fantasy MMORPG</td>
+                <td>Android</td>
+                <td>March 22, 2024</td>
+                <td>8.9/10</td>
+            </tr>
+            <tr>
+                <td>Street fighter 4</td>
+                <td>Fighter Rpg</td>
+                <td>android</td>
+                <td>15 January </td>
+                <td>5star</td>
+            </tr>
+            <tr>
+                <td>CALL OF DRAGONS</td>
+                <td>Adventure, Puzzle</td>
+                <td>android</td>
+                <td>June 14, 2024</td>
+                <td>8.6/10</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Upcoming Game Releases just for stream </h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Game</th>
+                <th>Genre</th>
+                <th>Platform</th>
+                <th>Expected Release</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Devil May cry</td>
+                <td>Fighter, Survival</td>
+                <td>Android</td>
+                <td>Q1 for stream</td>
+            </tr>
+            <tr>
+                <td>Downhill racer</td>
+                <td>Strategy, Time Travel</td>
+                <td>Strategic, android</td>
+                <td>some time</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+    
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Gamers Log</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <h1>Gamers Log</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Gamer Name</th>
+        <th>Game</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Score</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <script src="gamers_log.js"></script>
+</body>
+</html>
+</head>
+<body>
+
+  <script src="script.js"></script>
+</body>
+</html>
