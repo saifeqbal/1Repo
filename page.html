@@ -24,7 +24,9 @@
     </table>
     <button onclick="addGamer()">Add Gamer</button>
   </div>
+
   <div id="container" style="border:20px solid brown; background-color:brown; width:700px; height:840px,align="center";>
+
     <img src="callofdragons.jpg" width="400" height="400" style="display:block; margin:auto;">
     <img src="streetfighter4.jpg" width="400" height="400" style="display:block; margin:auto;">
 <img src="">
@@ -32,12 +34,14 @@
   <div id ="window", style="text-align:center;" align= "Center", margin="3,3" , border='bar',3,3>
     <iframe src="http://127.0.0.1:8080" width="900" ,height="500", frameborder="0" ,allow="accelerometer"; autoplay; clipboard-write; encrypted-media; gyroscope ; picture-in-picture" title="game stream">
 </iframe>
+
 </div>
-<div id = "footer"style = background-colour: black  3,3, bgcolour: brown margin =,2,1 em>
+<div id = "footer"s style = background-colour: black  3,3, bgcolour: brown margin =,2,1 em>
     <p>Please note that the link will be up for only a few minutes.</p>
   </div>
   <script>
     let gamerCount = 0;
+
     function addGamer() {
       gamerCount++;
       const tableBody = document.querySelector('#gamersTable tbody');
@@ -48,6 +52,7 @@
         <td>Logged In${gamerCount}</td>
       tableBody.appendChild(newRow);
     }
+
   </script>
 </footer>
 </head>
