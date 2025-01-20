@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-<body style= border: 10 px, red solid, margin: 3,3 px  padding: 4,4 px>
-  <meta charset="UTF-8">
+<body style = border: 10 px, red solid, margin: 3,3 px , padding: 4,4 px>
+ <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
- <title style = font-style: "italics" ,bold, font-size = 2 ,text-align="centre",align :"centre" padding = 2,3 px> 
+ <title style = font-style: "italics" ,bold, font-size = 2 ,text-align="centre",align :"centre" ,padding = 2,3 px> 
 Gamers Logged In</title>
   <link rel="stylesheet",href="newsyle.css">
   <h1 style="text-align:center;", text-animation =transition" align ="centre", font-style="italics","bold" 3,3 em ,align= "center">Gamers </h1>
@@ -14,8 +13,11 @@ font-style : italic ;
 font-size:40px;
  color: red ,text-style : bold;", text-animation= "transition  ",font-style="Italics", content=text-align"=center", border= 2,3,"solid">
 Page for the game stream. Login for more. </p>
-  <div class="container", style = "background-color: brown, align="center"  , border: 22 px , black , solid margin:1,1 px ,  padding: 1,1 px ;>
+
+  <div class="container", style = "background-color: brown, align="center"  , border: 22 px , black , solid margin:1,1 px , padding: 1,1 px ;>
+
     <h1>Number of Gamers Logged In</h1>
+
     <table id="gamersTable">
       <thead>
         <tr>
@@ -31,7 +33,7 @@ Page for the game stream. Login for more. </p>
     <button style= align:"center" ,onclick="addGamer()">Add Gamer</button>
   </div>
 </header>
-<header >
+<header>
   <div id="container" ,style="border:2,4 px,  Brown solid , padding : 3,3 px , margin: 3,3 px   background-color:brown ;  border: 1,1 px red solid, width:700px; height:840px,align="center";>
     <img src="callofdragons.jpg" width="400" height="400" style="display:block; margin:auto;">
     <img src="streetfighter4.jpg" width="400" height="400" style="display:block; margin:auto;">
@@ -41,12 +43,13 @@ Page for the game stream. Login for more. </p>
 </iframe>
 </div>
 <footer style = border: 3,3 px, brown,solid, margin : 5,5  padding: 2,3 px  >
-<div id = "footer" style=background-colour: black 3,4 px , bgcolour: brown,  margin =2,1 em , padding = 2, 3 px>
+<div id = "footer" ,style = background-colour: black 3,4 px , bgcolour: brown,  margin =2,1 em , padding = 2, 3 px>
     <p style="font-color= Brown ,font-style=" ">Please note that the link will be up for only a few minutes.</p>
   </div>
 </footer>
 </header>
   <script>
+
     let gamerCount = 0;
     function addGamer() 
 {
@@ -59,7 +62,9 @@ Page for the game stream. Login for more. </p>
         <td>Logged In${gamerCount}</td>
       tableBody.appendChild(newRow);
     }
+
   </script>
+
 </head>
 </body>
 </html>
