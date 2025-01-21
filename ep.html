@@ -4,7 +4,6 @@
 <style>
 
 </style>
-
 </head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title>a</title>
@@ -89,7 +88,6 @@ game
             padding: 10px;
             text-align: left;
         }
-
     </style>
 </head3>
     <h2>Gamers Table</h2>
@@ -99,13 +97,16 @@ game
 </tr>
 <td>Name
 </td>
-<tr><td>NAME OF GAME</td>
+<tr>
+<td>NAME OF GAME</td>
 </tr>
     <script src="gamers.js">
 // gamers.js
 // Sample data for gamers
 const gamers = [
-    { name: 'new ', age: 25, favoriteGame: 'Galaxiaga'.  },
+    { 
+name: 'new ', age: 25, favoriteGame: 'Galaxiaga'.  
+}
    ,
     { name: 'jonah', age: 22, favoriteGame: 'mech Arena' },
    }
@@ -127,10 +128,10 @@ function populateGamersTable() {
         tableBody.appendChild(row);
     });
 }
+
 // Call the function to populate the table when the page loads
 document.addEventListener('DOMContentLoaded', populateGamersTable);
 </script>
-
 <footer>
   <div id = "footer">
     <a href="https://facebook.com">Facebook</a>
@@ -139,11 +140,13 @@ document.addEventListener('DOMContentLoaded', populateGamersTable);
     <a href="https://www.youtube.com">Youtube</a>
   </div>
   <script>
+
   function onpress() 
 { 
 console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']")); console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
   </script>
+
 <script>
 const dropzone = document.getElementById('dropzone');
 dropzone.addEventListener('dragover', (event) => {
@@ -154,17 +157,17 @@ dropzone.addEventListener('drop',(event) => {
   const files = event.dataTransfer.files;
   // Process the files here
 });>
-
 </script>
-
   <style>
-  head1{
+  head1
+{
 background-color: brown; 
 bgcolor: brown;
 text-color="orange"; 
 margin: 2,3 em; 
 }
-head2{
+head2
+{
 margin=2,2 em;
 padding=2,3;
 background-color: brown; 
@@ -183,11 +186,11 @@ text-color="orange";
  }
   body 
 {
-bgcolor="brown";
+bgcolor="brown"; border : 3,3 px , rounded solid;
 border-style="rounded"; 
 background-color: brown;
 padding="rounded";
-transition="overflow";
+
 }
   </style>
 </head>
