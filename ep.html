@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>a</title>
+  <title></title>
 <body style = bgcolour : black Brown ,border : 56 px , brown solid, margin : 3,4 px padding : 4 3>
   <head1>
     <div id="dialogbox" style="width: 35px; height: 55px; background-color: brown; border: black solid 1px;">
-<div id="window-section">
         <h1>Window Section</h1>
-        <button onclick="showDialog()">Open Dialog </button>
-    </div>
-<div id="container",style= bgcolor : red , border : 4 px , gray ,metal , width=100,height=100>
+        <button onclick="showDialog()">
+Open Dialog </button>
+<div id="container",style= bgcolor : red , border : 4 px , gray ,metal,width=100,height=100>
 <img src="MechArena.jpg", alt="MechArena" ,width=100% ,height=100px, margin=3,3 padding=3,3 em>
 <img src ="Galaxiaga.png", alt= "Galaxiaga.png" width=100%, height=100px; padding:3,3,margin="3,3" >
 </div>
@@ -39,21 +38,21 @@ game
 </tr>
           </table>
         </form>
-        <img src="Galaxiaga.jpg" onclick="onpress();"  width="40" height="40" style="border:  white, solid 4px;" alt="galaxiaga"/>
+
+        <img src="Galaxiaga.jpg" onclick="onpress();" width="40" ,height="40" style="border: white, solid 4px;" alt="galaxiaga"/>
         </img>
       </frame>
     </div>
   </head1>
-
   <h1>
     games list 
   </h1>
-
   <head2> 
     <h2> 
       the new games are way better
       ,please have more fun
    </h2>
+
 <h> two more games added , Galaxiaga is the other one whose images will be updated soon
 </h>
   </head2>
@@ -61,7 +60,6 @@ game
  <div id="dropzone", style="width:100%; height:100px; border:2px dashed #ccc; text-align:center; line-height:100px;">
   </div>
 </div>
-
 <wbr>
 <head3> 
     <meta charset="UTF-8">
@@ -83,7 +81,6 @@ game
             padding: 10px;
             text-align: left;
         }
-
     </style>
 </head3>
     <h2>Gamers Table</h2>
@@ -128,23 +125,18 @@ function populateGamersTable() {
 // Call the function to populate the table when the page loads
 document.addEventListener('DOMContentLoaded', populateGamersTable);
 </script>
-
 <footer>
-
   <div id = "footer">
     <a href="https://facebook.com">Facebook</a>
     <a href="https://instagram.com">Instagram</a>
     <a href="https://linkedin.com">LinkedIn</a>
     <a href="https://www.youtube.com">Youtube</a>
   </div>
-
   <script>
-
   function onpress() 
 { 
 console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']")); console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
-
   </script>
 <script>
 const dropzone = document.getElementById('dropzone');
@@ -156,7 +148,6 @@ dropzone.addEventListener('drop',(event) => {
   const files = event.dataTransfer.files;
   // Process the files here
 });>
-
 </script>
 
   <style>
