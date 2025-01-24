@@ -10,15 +10,15 @@
 <body style= bgcolor="chroma" , border : solid, brown 4 px;
     color : red, height : 600 px, width : 600 px;
    height: 600 px ;
-   resize ="auto";>
-    <div id = "container" style="border: red ,solid 4px ; padding = 4 px ; margin  = 5 px solid gray">
+   resize ="auto"; >
+    <div id = "container" style="border: red ,solid 4px ; padding = 4 px ; margin  = 5 px solid gray" >
       <p>
 </p>
-<table>
-<tr>
+<table> 
+ <tr>
  <td>
 gamerid 
-</td>  
+ </td>  
 </tr>
 <td>
 gamers score
@@ -27,9 +27,10 @@ gamers score
 var / vart
 </td>
 <tr>
-<td>bonuses 
+<td>
+bonuses 
 </td>
-<tr>
+<tr></tr> 
 <td>
 events
 <td>
@@ -60,7 +61,6 @@ flow= strong,;
 }
 }
 </style>
-
  <p>
        </p>
     </div>
@@ -71,11 +71,9 @@ const data = [
     { game: 'tekken', bonuses: , gamestats: 'Chicago' },
     { game: 'street fighter', bonuses : 28, gamestats: 'Miami' }
 ];
-
 // Function to populate the table
 function populateTable() {
     const tableBody = document.getElementById('valuesTable').getElementsByTagName('tbody')[0];
-
     data.forEach(item => {
         const row = tableBody.insertRow();
         const cellGame = row.insertCell();
@@ -86,8 +84,10 @@ function populateTable() {
         cellgamestats.textContent = item.gamestats;
     });
 }
+
 // Call the function to populate the table when the page loads
 window.onload = populateTable;
+
  </script>
 <div id = "CONTAINER", style =  border = brown ,solid, 4px  padding = 7,5 px margin:5 px > 
 <img src="Ronin.png" , border = flow , autocapitalize= "text",size = 100%, animation = flow,5 s/>
