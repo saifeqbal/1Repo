@@ -81,7 +81,7 @@ function populateTable() {
     data.forEach(item => {
         const row = tableBody.insertRow();
 
-        const cellGame = row.insertCell(Street fighter);
+        const cellGame = row.insertCell();
         const cellbonuses = row.insertCell(7);
         const cellgamestats = row.insertCell();
         cellGame.textContent = item.game;
