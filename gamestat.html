@@ -52,15 +52,46 @@ justify-content="center"
 ;
 border=line 5px;
 border-box = 5 px;
+border-collase:collapse;
 hero 
 { 
 flow= strong,  ;  
 }
 }
 }
+
  <p>
        inside container</p>
     </div>
+// Sample data to populate the table
+<script>
+const data = [
+    { name: 'Alice', age: 30, city: 'New York' },
+    { name: 'Bob', age: 25, city: 'Los Angeles' },
+    { name: 'Charlie', age: 35, city: 'Chicago' },
+    { name: 'David', age: 28, city: 'Miami' }
+];
+
+// Function to populate the table
+function populateTable() {
+    const tableBody = document.getElementById('valuesTable').getElementsByTagName('tbody')[0];
+
+    data.forEach(item => {
+        const row = tableBody.insertRow();
+
+        const cellName = row.insertCell(5);
+        const cellAge = row.insertCell(10);
+        const cellCity = row.insertCell(2);
+
+        cellName.textContent = item.name;
+        cellAge.textContent = item.age;
+        cellCity.textContent = item.city;
+    });
+}
+
+// Call the function to populate the table when the page loads
+window.onload = populateTable;
+ 
 
 <div id = "CONTAINER", style =  border = brown ,solid, 4px  padding = 7,5 px margin:5 px > 
 <img src="Ronin.png" , border = flow , autocapitalize= "text",size = 100%, animation = flow,5 s/>
