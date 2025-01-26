@@ -1,4 +1,4 @@
-script.js                        
+              
 var functionu
 {
 document.addEventlistener(onclick());
