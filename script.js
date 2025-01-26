@@ -5,7 +5,7 @@ document.addEventlistener(onclick);
 }
 onclick()
 {
-console.log ("tr",${wvart/vart});
+console.log ("tr",${_vart/vart});
 console.log("tr",$(vart);
 console.log("tr",$(gamers);
 console.log("td", ${bonuses});
