@@ -11,8 +11,8 @@
     color : red, height : 600 px, width : 600 px;
    height: 600 px ;
    resize ="auto"; >
-    <div id = "container" style="border: red ,solid  double 4px ; padding = 4 px ; margin  = 5 px solid gray">
-
+    <div id = "container" style= "border: solid  double 4px orange ; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
+ gray">
  <p>
 <img src = "mecharena (1).png" alt = "mecharena">
 </p>
@@ -93,7 +93,6 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
 {
             color: #333;
         }
-
         form 
 {
             background-color: #fff;
@@ -147,25 +146,18 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
    </style>
 </head>
 <body>
-
 <h2>New Game Stats Entry Form</h2>
 <form id="gameStatsForm">
     <label for="title">Game Title:</label>
     <input type="text" id="title" required>
-    
     <label for="genre">Genre:</label>
     <input type="text" id="genre" required>
-    
     <label for="year">Release Year:</label>
     <input type="number" id="year" required>
-    
     <label for="rating">Rating (1-10):</label>
     <input type="number" id="rating" min="1" max="10" required>
-    
     <button type="submit">Add Game Stats</button>
 </form>
-
-
 </table>
 <script> document.getElementById('gameStatsForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent form submission
@@ -231,7 +223,6 @@ events
 </tr>
 </table>
 <style>
-
 table
 {
 border:
@@ -245,15 +236,25 @@ justify-content="center"
 border=line 5px;
 border-box = 5 px;
 border-collase:collapse;
+}
+image-container image{
+flex-wrap: flex;
+border-shadow: 0,2px, rgba(0,2,3,1)
+border-radius: 0, 3px; 
+overflow:overflow;
+color: 
+ rgba(2,3,4,0);
+}
+
 hero 
 { 
 flow = strong,;  
 }
     table
-
     {
         border: solid, line, 5px;
             border-margin:6px;
+
         background-colour: brown;
     }
 
@@ -262,23 +263,21 @@ flow = strong,;
             border: line, solid 6px;
         border-box: box-border;
             margin:5px;
- }
 
+ }
         td
    {
             border: solid , line 6px;
             border-box:box-border;
+border-radius: 4px; 
    }
 }
 
 }
-
 </style>
-
  <p>mechanical Arena  it's a new game and it's an Android game
        </p>
     </div>
-
 <script>
 const data = [
     { game: 'tekken', age: 30, bonuses: ,gamestats: 'New York' },
