@@ -2,13 +2,16 @@
 <html>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title></title>
+
 <body style = bgcolour : black Brown ,border : 56 px , brown solid, margin : 3,4 px padding : 4 3 ,px >
+
   <head1>
-    <div id="dialogbox" style="width: 35px; height: 55px; background-color: brown; border: black solid 1px;"></div>
+    <div id="dialogbox" style="width: 35px; height: 55px; background-color: brown; border: black solid 1px;">
+</div>
         <h1>Window Section</h1>
+
         <button onclick="showDialog()">
 Open Dialog </button>
-
 <div id="container",style= bgcolor : red , border : 4 px , gray ,metal,width=100,height=100>
 <img src="MechArena.jpg", alt="MechArena" ,width=100% ,height=100px, margin=3,3 padding=3,3 em>
 
@@ -18,7 +21,7 @@ Open Dialog </button>
         to display games new installed
       </p>
       <frame>
-        <img src="Mecharena.jpg", width="56" height="56" ,onclick="onpress()"; alt="mecharena" >
+        <img src="Mecharena.jpg", width="56" height="56" ,onclick="onpress()";alt="mecharena" >
         <text>Mecharena</text>
         </img>
 </frame>
@@ -40,7 +43,11 @@ game
 </tr>
           </table>
         </form>
-        <img src="Galaxiaga.jpg" onclick="onpress();" width="40" ,height="40" style="border: white, solid 4px;" alt="galaxiaga"/>
+
+        <img src="Galaxiaga.jpg" onclick="onpress();"
+ width="40" ,height="40"
+ style="border: white, solid 4px;"
+ alt="galaxiaga"/>
         </img>
       </frame>
     </div>
@@ -53,10 +60,9 @@ game
       the new games are way better
       ,please have more fun
    </h2>
-<h> two more games added , Galaxiaga is the other one whose images will be updated soon
+<h> two more games added , Galaxiaga is the other one whose details will be updated soon
 </h>
   </head2>
-
 <div id ="window" style=body-color="black",resize=auto, animation="glitter" , border= 2, 3 , "black" solid, margin="black", padding="3,3", border-style="line" >
  <div id="dropzone", style="width:100%; height:100px; border:2px dashed #ccc; text-align:center; line-height:100px;">
   </div>
@@ -84,7 +90,6 @@ game
             text-align: left;
         }
     </style>
-
 </head3>
     <h2>Gamers Table</h2>
     <table id="gamersTable">
@@ -124,11 +129,11 @@ function populateGamersTable() {
         tableBody.appendChild(row);
     });
 }
-
 // Call the function to populate the table when the page loads
 document.addEventListener('DOMContentLoaded', populateGamersTable);
 </script>
-<footer>
+
+<footer style= background-color: black, >
   <div id = "footer">
     <a href="https://facebook.com">Facebook</a>
     <a href="https://instagram.com">Instagram</a>
@@ -141,7 +146,6 @@ document.addEventListener('DOMContentLoaded', populateGamersTable);
 console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']")); console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
   </script>
-
 <script>
 const dropzone = document.getElementById('dropzone');
 dropzone.addEventListener('dragover', (event) => {
@@ -152,6 +156,7 @@ dropzone.addEventListener('drop',(event) => {
   const files = event.dataTransfer.files;
   // Process the files here
 });>
+
 </script>
   <style>
   head1
@@ -161,6 +166,7 @@ bgcolor: brown;
 text-color="orange"; 
 margin: 2,3 em; 
 }
+
 head2
 {
 margin=2,2 em;
@@ -169,6 +175,7 @@ background-color: brown;
 bgcolor: brown;
 text-color="orange";
 }
+
 head3 
 {
 background-color:brown; 
@@ -184,10 +191,12 @@ text-color="orange";
  }
   body
 {
-bgcolor="brown"; border : 3,3 px , rounded solid;
+bgcolor="brown"; border :  rounded solid 5px;
+border-radius:3px;
 border-style="rounded"; 
 background-color: brown;
 padding="rounded";
+
 }
   </style>
 </head>
