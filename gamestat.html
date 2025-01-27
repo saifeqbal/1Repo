@@ -16,6 +16,185 @@
  <p>
 <img src = "mecharena (1).png" alt = "mecharena">
 </p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Display Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+    
+        th {
+            background-color: #f2f2f2;
+            backfround-color:
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<h2>Game Entry Form</h2>
+<form id="gameForm">
+    <label for="title">Game Title:</label>
+    <input type="text" id="title" required>   
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" required> 
+    <label for="year">Release Year:</label>
+    <input type="number" id="year" required>
+    <button type="submit">Add Game</button>
+</form>
+<h2>Game Display Table</h2>
+<table id="gameTable">
+    <thead>
+        <tr>
+            <th>Game Title</th>
+            <th>Genre</th>
+            <th>Release Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Game data will be inserted here -->
+    </tbody>
+</table>
+<script>
+document.getElementById('gameForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+        // Get input values
+        const title = document.getElementById('title').value;
+        const genre = document.getElementById('genre').value;
+        const year = document.getElementById('year').value;
+        // Create a new row and cells
+        const table = document.getElementById('gameTable').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+
+        // Insert the values into the cells
+        cell1.textContent = title;
+        cell2.textContent = genre;
+        cell3.textContent = year;
+
+        // Clear the form
+        document.getElementById('gameForm').reset();
+    });
+</script>
+    </head>
+    </body> 
+    </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Games Stats Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>New Game Stats Entry Form</h2>
+<form id="gameStatsForm">
+    <label for="title">Game Title:</label>
+    <input type="text" id="title" required>
+    
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" required>
+    
+    <label for="year">Release Year:</label>
+    <input type="number" id="year" required>
+    
+    <label for="rating">Rating (1-10):</label>
+    <input type="number" id="rating" min="1" max="10" required>
+    
+    <button type="submit">Add Game Stats</button>
+</form>
+
+<h2>New Games Stats Table</h2>
+<table id="gameStatsTable">
+    <thead>
+        <tr>
+            <th>Game Title</th>
+            <th>Genre</th>
+            <th>Release Year</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Game stats will be inserted here -->
+    </tbody>
+</table>
+
+<script>
+    document.getElementById('gameStatsForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get input values
+        const title = document.getElementById('title').value;
+        const genre = document.getElementById('genre').value;
+        const year = document.getElementById('year').value;
+        const rating = document.getElementById('rating').value;
+
+        // Create a new row and cells
+        const table = document.getElementById('gameStatsTable').getElementsByTagName('tbody')[0];
+        const newRow = table.insertRow();
+
+        const cell1 = newRow.insertCell(0);
+        const cell2 = newRow.insertCell(1);
+        const cell3 = newRow.insertCell(2);
+        const cell4 = newRow.insertCell(3);
+
+        // Insert the values into the cells
+        cell1.textContent = title;
+        cell2.textContent = genre;
+        cell3.textContent = year;
+        cell4.textContent = rating;
+
+        // Clear the form
+        document.getElementById('gameStatsForm').reset();
+    });
+</script>
 
 <table> 
  <tr>
