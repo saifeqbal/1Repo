@@ -5,17 +5,17 @@ insert column ["gamers table", varchar(" 256") ,where values ("gamers table"),("
 insert column[ "title" , varchar ("32") values [(" OS, Android" )];
  insert column ("games") VARCHAR 64 WHERE values [ ("Street fighter" ),("tekken"), (" Ronin" )("call of dragons "),("OS, Android")];
 insert column ["Release " varchar("54"),values( ("12/54")];
-INSERT INTO COLUMN [("GAMES")];
+INSERT INTO COLUMN [("Release")];
 {
-
+values("")
 }
-insert row("game 1", (32) values ("Street fighter")];
+insert row("GAME 1", (32) values ("Street fighter")];
 INSERT ROW ["GAME 2" VARCHAR 16 VALUES("call of dragons")];
 INSERT row[ "game 3",VARCHAR 16, values("Galaxiaga")];
 insert row ["game 4", VARCHAR 16 , VALUES("MECH ARENA");
 INSERT ROW ["game 5", VARCHAR 16 , VALUES("BULLET ECHO INDIA"),("")];
-INSERT ROW [ "GAME 6" VARCHAR 16 VALUES [("BATTLEGROUNDS INDIA") ("")];
-insert into column  [("games") ,values [("")];
+INSERT ROW [ "GAME 6" VARCHAR 16 VALUES [("BATTLEGROUNDS INDIA") ("23/10")];
+insert into column  [("games") ,values [("vintage games")];
 }
 END TABLE;
 
