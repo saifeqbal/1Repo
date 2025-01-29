@@ -69,15 +69,6 @@ if ($conn->query($sql) === TRUE) {
     echo "Error inserting data: " . $conn->error;
 }
 
-// Create Pictures table
-$sql = "CREATE TABLE Pictures (
-    PictureID INT AUTO_INCREMENT PRIMARY KEY,
-    FileName VARCHAR(255) NOT NULL,
-    FileType VARCHAR(50) NOT NULL,
-    FileSize INT NOT NULL,
-    ImageData BLOB NOT NULL,
-    UploadDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);";
 
 if ($conn->query($sql) === TRUE) {
     echo "Table Pictures created successfully\n";
