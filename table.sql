@@ -1,5 +1,6 @@
 create database tablen
-create table tablen;
+create table tablen{
+
 insert column ["gamers table", varchar(" 256") ,where values ("gamers table"),(" game starts") ("scores")  ("players") ];
 insert column[ "title" , varchar ("32") values [(" OS, Android" )];
  insert column ("games") VARCHAR 64 WHERE values [ ("Street fighter" ),("tekken"), (" Ronin" )("call of dragons "),("OS, Android")];
@@ -8,7 +9,6 @@ INSERT INTO COLUMN [("GAMES")];
 {
 
 }
-
 insert row("game 1", (32) values ("Street fighter")];
 INSERT ROW ["GAME 2" VARCHAR 16 VALUES("call of dragons")];
 INSERT row[ "game 3",VARCHAR 16, values("Galaxiaga")];
@@ -16,6 +16,8 @@ insert row ["game 4", VARCHAR 16 , VALUES("MECH ARENA");
 INSERT ROW ["game 5", VARCHAR 16 , VALUES("BULLET ECHO INDIA"),("")];
 INSERT ROW [ "GAME 6" VARCHAR 16 VALUES [("BATTLEGROUNDS INDIA") ("")];
 insert into column  [("games") ,values [("")];
+}
+END TABLE;
 
 
 -- Create a SQL file named 'image_storage.sql'
