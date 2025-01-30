@@ -1,4 +1,4 @@
-create database tablen
+create database tablen;
 create table tablen{
 
 insert column ["gamers table", varchar(" 256") ,where values ("gamers table"),(" game starts") ("scores")  ("players") ];
