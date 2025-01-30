@@ -17,7 +17,6 @@ INSERT ROW ["game 5", VARCHAR 16 , VALUES("BULLET ECHO INDIA"),("")];
 INSERT ROW [ "GAME 6" VARCHAR 16 VALUES [("BATTLEGROUNDS INDIA") ("23/10")];
 insert into column  [("games") ,values [("vintage games")];
 }
-END TABLE;
 
 
 -- Create a SQL file named 'image_storage.sql'
