@@ -7,39 +7,31 @@ $servername = "localhost";
 $username = "username";
 $password = "password";
 $dbname = "tablen";
-
 $conn = new mysqli($servername, $username, $password);
 if($conn->connect_error)
-
  {
     die("Connection failed: "  $conn->connect_error);
-
 }
+
 $sql = "CREATE DATABASE tablen";
 if ($conn->query($sql) === TRUE)
-
  {
     echo "Database created successfully\n";
 }
-
  else
-
  {
     echo "Error creating database: " . $conn->error;
 }
-$conn->select_db($tablen);
 
+$conn->select_db($tablen);
 if ($conn->query($sql) === TRUE)
  {
     echo "Table tablen created successfully\n";
 } 
-
 else 
-
 {
     echo "Error creating table: " . $conn->error;
 }
-
 $sql = "INSERT INTO tablen (column1, column2, column3, column4) VALUES
 ('gamers table', 'OS, Android', 'Street fighter', '12/54'),
 ('game starts', 'title', 'tekken', '12/54'),
@@ -50,41 +42,56 @@ if ($conn->query($sql) === TRUE)
 {
     echo "Data inserted successfully\n";
 } 
+
 else 
+
 {
     echo "Error inserting data: " . $conn->error;
 }
 
+
 else 
+
 {
     echo "Error creating table: " . $conn->error;
 }
+
 $conn->close();
 ?>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamer  web title </title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
     <p>Profile</p>
+
 <body style= bgcolor="chroma",border : solid, brown 4 px;
+
     color : red, height : 600 px, width : 600 px;
    height: 600 px ;
    resize ="auto"; >
+
     <div id = "container" style= "border: solid  double 4px orange ; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
  gray">
+
  <p>
-<img src = "mecharena (1).png" alt = "mecharena">
+<img src = "mecharena (1).png" ,alt = "mecharena">
 </p>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Display Table</title>
+    <title>
+Game Display Table
+</title>
     <style>
         
     </style>
+
 </head>
+
 <body>
+
 <h2>Game Entry Form</h2>
 <form id="gameForm">
     <label for="title">Game Title:</label>
@@ -95,14 +102,19 @@ $conn->close();
     <input type="number" id="year" required>
     <button type="submit">Add Game</button>
 </form>
+
 <h2>Game Display Table</h2>
+
 <table id="gameTable">
     <thead>
+
         <tr>
+
             <th>Game Title</th>
             <th>Genre</th>
             <th>Release Year</th>
         </tr>
+
     </thead>
     <tbody>
         <!-- Game data will be inserted here -->
@@ -118,11 +130,9 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
         // Create a new row and cells
         const table = document.getElementById('gameTable').getElementsByTagName('tbody')[0];
         const newRow = table.insertRow();
-
         const cell1 = newRow.insertCell(0);
         const cell2 = newRow.insertCell(1);
         const cell3 = newRow.insertCell(2);
-
         // Insert the values into the cells
         cell1.textContent = title;
         cell2.textContent = genre;
@@ -130,11 +140,11 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
         // Clear the form
         document.getElementById('gameForm').reset();
     });
+
 </script>
     </head>
     </body> 
     </html>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -149,10 +159,12 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
             margin: 0;
             padding: 20px;
         }
+
         h2 
 {
             color: #333;
         }
+
         form 
 {
             background-color: #fff;
@@ -161,13 +173,14 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
+
         label
  {
             margin-right: 10px;
             font-weight: bold;
         }
-
-    button {
+    button 
+{
             padding: 10px 15px;
             background-color: #007BFF;
             color: white;
@@ -176,10 +189,14 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        button:hover {
+
+        button:hover
+ {
             background-color: #0056b3;
         }
-        table {
+
+        table 
+{
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
@@ -187,22 +204,28 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
             
             th, td {
             padding: 12px;
             text-align: left;
             border-bottom: 1px solid #ddd;
         }
-        th {
+        th 
+{
             background-color: #007BFF;
             color: white;
         }
-        tr:hover {
+        tr:hover 
+{
             background-color: #f1f1f1;
         }
-        tr:nth-child(even) {
+
+        tr:nth-child(even)
+ {
             background-color: #f9f9f9;
         }
+
    </style>
 </head>
 <body>
@@ -216,19 +239,25 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
     <input type="number" id="year" required>
     <label for="rating">Rating (1-10):</label>
     <input type="number" id="rating" min="1" max="10" required>
-    <button type="submit">Add Game Stats</button>
-</form>
-</table>
-<script> document.getElementById('gameStatsForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
 
-        // Get input values
+    <button type="submit">Add Game Stats</button>
+
+</form>
+
+</table>
+
+<script>
+ document.getElementById('gameStatsForm').addEventListener('submit', function(event) 
+{
+        event.preventDefault();
+// submission
+
         const title = document.getElementById('title').value;
         const genre = document.getElementById('genre').value;
         const year = document.getElementById('year').value;
         const rating = document.getElementById('rating').value;
 
-        // Create a new row and cells
+     
         const table = document.getElementById('gameStatsTable').getElementsByTagName('tbody')[0];
         const newRow = table.insertRow();
 
@@ -237,15 +266,16 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
         const cell3 = newRow.insertCell(2);
         const cell4 = newRow.insertCell(3);
 
-        // Insert the values into the cells
+     
         cell1.textContent = title;
         cell2.textContent = genre;
         cell3.textContent = year;
         cell4.textContent = rating;
 
-        // Clear the form
-        document.getElementById('gameStatsForm').reset();
+     
+  document.getElementById('gameStatsForm').reset();
     });
+
 </script>
 
 <table> 
@@ -254,31 +284,23 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
 gamerid 
  </td>  
 </tr>
-
 <td>
 gamers score
 </td>
-
 <td>
-
 ${_vart}/vart
-
 </td>
 <tr>
-
 <td>
 bonuses 
 </td>
-
 <tr>
 <td>
 events
 <td>
-
 </tr>
 <tr>
 <td>
-
 </td>
 </tr>
 </table>
@@ -297,7 +319,9 @@ border=line 5px;
 border-box = 5 px;
 border-collase:collapse;
 }
-image-container image{
+
+image-container image
+{
 flex-wrap: flex;
 border-shadow: 0,2px, rgba(0,2,3,1)
 border-radius: 0, 3px; 
@@ -305,25 +329,23 @@ overflow:overflow;
 color: 
  rgba(2,3,4,0);
 }
-
 hero 
 { 
 flow = strong,;  
 }
-    table
+    
+table
     {
-        border: solid, line, 5px;
+        border : solid, line, 5px;
             border-margin:6px;
 
         background-colour: brown;
     }
-
         tr
 {
             border: line, solid 6px;
         border-box: box-border;
             margin:5px;
-
  }
         td
    {
@@ -332,19 +354,21 @@ flow = strong,;
 border-radius: 4px; 
    }
 }
-
 }
 </style>
  <p>mechanical Arena  it's a new game and it's an Android game
        </p>
     </div>
+
 <script>
+
 const data = [
     { game: 'tekken', age: 30, bonuses: ,gamestats: 'New York' },
     { game: 'Call of dragons', bonuses: ,gamestats: 'Los Angeles' },
     { game: 'galaxiaga', bonuses: , gamestats: 'Chicago' },
     { game: 'street fighter', bonuses : 28, gamestats: 'Miami' }
 ];
+
 // Function to populate the table
 function populateTable() 
 {
@@ -366,6 +390,7 @@ window.onload = populateTable();
  </script>
 <div id = "CONTAINER", style =  border = brown ,solid, 4px  padding = 7,5 px margin:5 px > 
 <img src="galax.jpg" , border = flow , autocapitalize= "text",size = 100%, animation = flow,5 s/>
+
     <p> 
 to data
 </p> 
@@ -383,7 +408,9 @@ to data
                     </a>
                 </li>
                 <li>
-                    <a href="#gallery">scores percentage </a>        
+                    
+<a href="#gallery">scores percentage </a>        
+
                 </li>
                 <li>
                     <a href="#contact">
@@ -396,16 +423,18 @@ to data
 
     <section id ="header",style = color : red , transition = "bold", string, display ="box",border =3,3 px line, solid; front-color : orange,animation-style= "flow" , transition, 2,3 ,solid,animation = transition,  animation-style ="glow"/>
 
-    <section id="about" >
+    <section id="about">
+
     <section id ="footer">
+
     <div id ="body"> 
         <div id = "section ", style =  "dialog" resize: "auto", textbox = autocapitalize= "textbox", dragable>         
         </div>
-
         <div id="header"> 
         <h2>About Me</h2>
         <p>Welcome to my gaming  website profile profile! I'm a passionate gamer and streamer. Here you'll find information about my favorite games, achievements, and some awesome gaming moments.</p>
     </section>
+
     <section id="games">
         <h2>Games</h2>
         <ul>
@@ -414,7 +443,6 @@ to data
             <li>tekken</li>
         </ul>
     </section>
-
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
@@ -423,9 +451,7 @@ to data
             <img src="tekken8.jpg" alt="tekken">
         </div>
     </section>
-
 <div id =" box ",style= font-color= red,margin = 2,3 px,solid>
-
     <section id="box">
         <h2>Contact</h2>
         <form>
@@ -440,7 +466,6 @@ to data
         </form>
     </section>
 </div>
-
     <footer style = container : "block", margin= 2, 3 px , border = 2 ,3 px black,  solid  , bgcolour =black,  solid , transition = "ease">
 
         <p style = bgcolor : " brown", 4  px font-style = "brown" , font-animation = "trans", 2 s ,animation =  2 3 s ,flow , style = border : 4 ,m, text-style = "border" , font-border = "rounded",  >&copy; 2024 My Gaming Profile </p>
@@ -462,47 +487,51 @@ body {
     background-color: #f0f0f0;
     line-height: 1.6;
 }
-
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 9;
 }
-
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header h1 {
+header h1 
+{
     margin-left: 20px;
 }
-nav ul {
+nav ul 
+{
     list-style-type: none;
     display: flex;
 }
-nav ul li {
+nav ul li 
+{
     margin-right: 20px;
 }
-nav ul li a {
+nav ul li a 
+{
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-nav ul li a:hover {
+nav ul li a:hover 
+{
     color: #ffd700;
 }
-main {
+main 
+{
     padding: 20px;
 }
-section {
+section
+ {
     margin-bottom: 30px;
 }
 h2 {
     font-size: 24px;
     margin-bottom: 15px;
 }
-
         body
             {
              border: 5,4 px,blue, solid ;
@@ -519,7 +548,6 @@ h2 {
         {
             border:  solid, line , 4 p;
 margin : 5px ;  
-
     padding :     }
 .sftware{
     background-color: #fff;
