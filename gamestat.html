@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
 <?php
 $servername = "localhost";
 $username = "username";
@@ -49,21 +48,22 @@ else
 {
     echo "Error creating table: " . $conn->error;
 }
-
 $conn->close();
 ?>
+<head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamer  web title </title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
     <p>Profile</p>
+
 <body style= bgcolor="chroma",border : solid, brown 4 px;
     color : red, height : 600 px, width : 600 px;
    height: 600 px ;
    resize ="auto"; >
-
     <div id = "container" style= "border: solid  double 4px orange ; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
  gray">
  <p>
@@ -72,17 +72,18 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-
 Game Display Table
 </title>
-
     <style>
       
     </style>
 </head>
 <body>
+
 <h2>Game Entry Form</h2>
+
 <form id="gameForm">
+
     <label for="title">Game Title:</label>
     <input type="text" id="title" required>   
     <label for="genre">Genre:</label>
@@ -91,8 +92,11 @@ Game Display Table
     <input type="number" id="year" required>
     <button type="submit">Add Game</button>
 </form>
+
 <h2>Game Display Table</h2>
+
 <table id="gameTable">
+
     <thead>
         <tr>
             <th>Game Title</th>
@@ -100,6 +104,7 @@ Game Display Table
             <th>Release Year</th>
         </tr>
     </thead>
+
 
     <tbody>
         <!-- Game data will be inserted here -->
