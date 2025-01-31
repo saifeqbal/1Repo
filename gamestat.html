@@ -2,98 +2,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <?php
 $servername = "localhost";
 $username = "username";
 $password = "password";
 $dbname = "tablen";
 $conn = new mysqli($servername, $username, $password);
-
 if($conn->connect_error)
  {
+
     die("Connection failed: "  $conn->connect_error);
+
 }
 $sql = "CREATE DATABASE tablen";
+
 if ($conn->query($sql) === TRUE)
  {
     echo "Database created successfully\n";
 }
+
  else
- 
 {
     echo "Error creating database: " . $conn->error;
 }
-
 $conn->select_db($tablen);
 if ($conn->query($sql) === TRUE)
+
  {
     echo "Table tablen created successfully\n";
 } 
+
 else 
 {
     echo "Error creating table: " . $conn->error;
 }
 $sql = "INSERT INTO tablen (column1, column2, column3, column4) VALUES
-('gamers table', 'OS, Android', 'Street fighter', '12/54'),
+('gamers table', 'OS, Android','Street fighter', '12/54'),
 ('game starts', 'title', 'tekken', '12/54'),
 ('scores', 'games', 'Ronin', '12/54'),
 ('players', 'Release', 'call of dragons', '12/54');";
-
 if ($conn->query($sql) === TRUE) 
 {
     echo "Data inserted successfully\n";
 } 
-
 else 
-
 {
     echo "Error inserting data: " . $conn->error;
 }
-
-
 else 
-
 {
     echo "Error creating table: " . $conn->error;
 }
-
 $conn->close();
+
 ?>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamer  web title </title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
     <p>Profile</p>
-
 <body style= bgcolor="chroma",border : solid, brown 4 px;
-
     color : red, height : 600 px, width : 600 px;
    height: 600 px ;
    resize ="auto"; >
 
     <div id = "container" style= "border: solid  double 4px orange ; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
  gray">
-
  <p>
 <img src = "mecharena (1).png" ,alt = "mecharena">
 </p>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
+
 Game Display Table
 </title>
+
     <style>
-        
+      
     </style>
-
 </head>
-
 <body>
-
 <h2>Game Entry Form</h2>
 <form id="gameForm">
     <label for="title">Game Title:</label>
@@ -104,26 +95,25 @@ Game Display Table
     <input type="number" id="year" required>
     <button type="submit">Add Game</button>
 </form>
-
 <h2>Game Display Table</h2>
-
 <table id="gameTable">
     <thead>
-
         <tr>
-
             <th>Game Title</th>
             <th>Genre</th>
             <th>Release Year</th>
         </tr>
-
     </thead>
+
     <tbody>
         <!-- Game data will be inserted here -->
     </tbody>
+
 </table>
+
 <script>
-document.getElementById('gameForm').addEventListener('submit', function(event) {
+document.getElementById('gameForm').addEventListener('submit', function(event)
+ {
         event.preventDefault(); // Prevent form submission
         // Get input values
         const title = document.getElementById('title').value;
@@ -142,11 +132,11 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
         // Clear the form
         document.getElementById('gameForm').reset();
     });
-
 </script>
     </head>
     </body> 
     </html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,12 +152,14 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
             padding: 20px;
         }
 
+
         h2 
 {
             color: #333;
-        }
+}
 
         form 
+
 {
             background-color: #fff;
             padding: 20px;
@@ -175,13 +167,13 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
-
         label
  {
             margin-right: 10px;
             font-weight: bold;
         }
-    button 
+
+  button 
 {
             padding: 10px 15px;
             background-color: #007BFF;
@@ -191,11 +183,11 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         button:hover
  {
             background-color: #0056b3;
         }
+
 
         table 
 {
@@ -227,7 +219,6 @@ document.getElementById('gameForm').addEventListener('submit', function(event) {
  {
             background-color: #f9f9f9;
         }
-
    </style>
 </head>
 <body>
