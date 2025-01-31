@@ -193,6 +193,7 @@ document.getElementById('gameForm').addEventListener('submit', function(event)
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         button:hover
  {
             background-color: #0056b3;
@@ -270,6 +271,7 @@ document.getElementById('gameForm').addEventListener('submit', function(event)
         cell2.textContent = genre;
         cell3.textContent = year;
         cell4.textContent = rating;
+}
 
      
   document.getElementById('gameStatsForm').reset();
@@ -366,7 +368,6 @@ const data = [
     { game: 'galaxiaga', bonuses: , gamestats: 'Chicago' },
     { game: 'street fighter', bonuses : 28, gamestats: 'Miami' }
 ];
-
 // Function to populate the table
 function populateTable() 
 {
@@ -392,6 +393,7 @@ window.onload = populateTable();
 to data
 </p> 
 </div>
+
     <header style = "bgcolor: orange, background =" orange " ; border = black solid 4 px , margin = 6px> 
         <h1>My Gaming Profile</h1>
         <nav>
@@ -442,7 +444,7 @@ to data
         <h2>Gallery</h2>
         <div class="gallery">
             <img src="mecharena (1).jpg",alt="mechanical Arena">
-            <img src="Galax.jpg",alt="m">
+            <img src="galax.jpg",alt="m">
             <img src="tekken8.jpg" alt="tekken">
         </div>
     </section>
