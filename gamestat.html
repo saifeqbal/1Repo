@@ -16,65 +16,78 @@ if ($conn->query($sql) === TRUE)
  {
     echo "Database created successfully\n";
 }
+
  else
+
 {
     echo "Error creating database: " . $conn->error;
 }
-
 $conn->select_db($tablen);
+
 if ($conn->query($sql) === TRUE)
  {
     echo "Table tablen created successfully\n";
 } 
+
 else 
 {
     echo "Error creating table: " . $conn->error;
 }
+
 $sql = "INSERT INTO tablen (column1, column2, column3, column4) VALUES
 ('gamers table', 'OS, Android','Street fighter', '12/54'),
 ('game starts', 'title', 'tekken', '12/54'),
 ('scores', 'games', 'Ronin', '12/54'),
 ('players', 'Release', 'call of dragons', '12/54');";
+
 if ($conn->query($sql) === TRUE) 
 {
     echo "Data inserted successfully\n";
 } 
+
 else 
 {
     echo "Error inserting data: " . $conn->error;
 }
-
 else 
 {
     echo "Error creating table: " . $conn->error;
 }
+
 $conn->close();
 ?>
+
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamer  web title </title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
     <p>Profile</p>
 <body style= bgcolor="chroma",border : solid, brown 4 px;
     color : red, height : 600 px, width : 600 px;
    height: 600 px ;
-   resize ="auto"; >
+   resize ="auto";>
     <div id = "container" style= "border: solid  double 4px orange ; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
  gray">
  <p>
 <img src = "mecharena (1).png" ,alt = "mecharena">
 </p>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>
 Game Display Table
 </title>
+
     <style>
       
     </style>
 </head>
+
 <body>
 
 <h2>Game Entry Form</h2>
@@ -422,7 +435,9 @@ to data
             <li>Galaxiaga</li>
             <li>tekken</li>
         </ul>
+
     </section>
+
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery">
@@ -482,25 +497,30 @@ header h1
 {
     margin-left: 20px;
 }
+
 nav ul 
 {
     list-style-type: none;
     display: flex;
 }
+
 nav ul li 
 {
     margin-right: 20px;
 }
+
 nav ul li a 
 {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
+
 nav ul li a:hover 
 {
     color: #ffd700;
 }
+
 main 
 {
     padding: 20px;
