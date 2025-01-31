@@ -11,19 +11,18 @@ if($conn->connect_error)
 {
     die("Connection failed: " . $conn->connect_error);
 }
+
 $sql = "CREATE DATABASE tablen";
 if ($conn->query($sql) === TRUE)
  {
     echo "Database created successfully\n";
 }
-
  else
-
 {
     echo "Error creating database: " . $conn->error;
 }
-$conn->select_db($tablen);
 
+$conn->select_db($tablen);
 if ($conn->query($sql) === TRUE)
  {
     echo "Table tablen created successfully\n";
@@ -33,13 +32,11 @@ else
 {
     echo "Error creating table: " . $conn->error;
 }
-
 $sql = "INSERT INTO tablen (column1, column2, column3, column4) VALUES
 ('gamers table', 'OS, Android','Street fighter', '12/54'),
 ('game starts', 'title', 'tekken', '12/54'),
 ('scores', 'games', 'Ronin', '12/54'),
 ('players', 'Release', 'call of dragons', '12/54');";
-
 if ($conn->query($sql) === TRUE) 
 {
     echo "Data inserted successfully\n";
@@ -87,9 +84,7 @@ Game Display Table
       
     </style>
 </head>
-
 <body>
-
 <h2>Game Entry Form</h2>
 
 <form id="gameForm">
@@ -420,7 +415,9 @@ to data
         </nav>
     </header>
     <section id ="header",style = color : red , transition = "bold", string, display ="box",border =3,3 px line, solid; front-color : orange,animation-style= "flow" , transition, 2,3 ,solid,animation = transition,  animation-style ="glow"/>
+
     <section id="about">
+
     <section id ="footer">
     <div id ="body"> 
         <div id = "section ", style =  "dialog" resize: "auto", textbox = autocapitalize= "textbox", draggable = "dragable">         
@@ -444,7 +441,7 @@ to data
         <h2>Gallery</h2>
         <div class="gallery">
             <img src="mecharena (1).jpg",alt="mechanical Arena">
-            <img src="galax.jpg",alt="m">
+            <img src="Galaxiaga.png",alt="m">
             <img src="tekken8.jpg" alt="tekken">
         </div>
     </section>
