@@ -4,6 +4,39 @@
  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
  <title style = background: , font-style: "italics" ,bold, font-size = 2 ,text-align="centre",align:"centre",padding = 3 px > 
+//<?php
+$connect->database{tablen}
+$echo -
+
+
+
+<?php
+// Database connection parameters
+$host = 'localhost'; // Host name
+$dbname = 'tablen'; // Database name
+$username = 'your_username'; // Database username
+$password = 'your_password'; // Database password
+
+try {
+    // Establish a connection to the database
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+    // Set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // If we reach this point, the connection was successful
+    echo "Connected to the database successfully";
+
+} catch(PDOException $e) {
+    // If there is an error, display the error message
+    echo "Error connecting to the database: " . $e->getMessage();
+}
+
+// Don't forget to close the connection when you're done
+$conn = null;
+?>
+
+> //
 Gamers Logged In</title>
   <link rel="stylesheet",href="newsyle.css">
   <h1 style= " background: orange, text-align:center;", text-animation = transition align ="centre", font-style="italics","bold" 3,3 em ,align= "center">Gamers </h1>
