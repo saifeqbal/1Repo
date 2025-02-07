@@ -7,7 +7,9 @@ import java.sql.connction
 import SQL.connection;
 import java.connection.sql;
 import 
-username
+connection = SQL{"ph.sql"}
+
+usernameusername}
 {
 "saif", "eqbal", 
 "java code", 
