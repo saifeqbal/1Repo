@@ -7,13 +7,13 @@ insert column[ "title" , varchar ("32") values [(" OS, Android" )];
 insert column ["Release " varchar("54"),values( ("12/54")];
 INSERT INTO COLUMN [("Release")];
 {
-values("")
+values("3" )
 }
 insert row("GAME 1", (32) values ("Street fighter")];
 INSERT ROW ["GAME 2" VARCHAR 16 VALUES("call of dragons")];
 INSERT row[ "game 3",VARCHAR 16, values("Galaxiaga")];
-insert row ["game 4", VARCHAR 16 , VALUES("MECH ARENA");
-INSERT ROW ["game 5", VARCHAR 16 , VALUES("BULLET ECHO INDIA"),("")];
+insert row ["game 4", VARCHAR 16 , VALUES ("MECH ARENA");
+INSERT ROW ["game 5", VARCHAR 16 , VALUES("BULLET ECHO INDIA"),("develop in India")];
 INSERT ROW [ "GAME 6" VARCHAR 16 VALUES [("BATTLEGROUNDS INDIA") ("23/10")];
 insert into column  [("games") ,values [("vintage games")];
 }
