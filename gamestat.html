@@ -1,5 +1,25 @@
 
-<!DOCTYPE html>
+<?php
+// Database configuration
+$servername = "localhost"; // Change if your database server is different
+$username = "your_username"; // Your database username
+$password = "your_password"; // Your database password
+$dbname = "your_database"; // Your database name
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+// Close the connection
+$conn->close();
+?>
+
+ html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -56,10 +76,12 @@ Game Display Table
     </thead>
 
     <tbody>
-        <!-- Game data will be inserted here -->
+
+        <!-- Game dat will be inserted here -->
     </tbody>
 </table>
 <script>
+
 document.getElementById('gameForm').addEventListener('submit', function(event)
 
  {
