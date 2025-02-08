@@ -1,25 +1,21 @@
 
 <?php
-// Database configuration
-$servername = "localhost"; // Change if your database server is different
-$username = "your_username"; // Your database username
-$password = "your_password"; // Your database password
-$dbname = "your_database"; // Your database name
-
-// Create connection
+$servername = "localhost";
+$username = "your_username"; 
+$password = "your_password";
+$dbname = "table.sql";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
+if ($conn->connect_error) 
+{
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
 
-// Close the connection
+echo "Connected successfully";
 $conn->close();
 ?>
 
- html>
+<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,10 +28,8 @@ $conn->close();
     color : red, height : 600 px, width : 600 px;
    height: 600 px ;
    resize ="auto";>
-
     <div id = "container" style= "border: solid  double 4px orange ; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
  gray">
-
  <p>
 <img src = "mecharena (1).png" ,alt = "mecharena">
 </p>
