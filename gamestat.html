@@ -5,16 +5,15 @@ $username = "your_username";
 $password = "your_password";
 $dbname = "tablen.sql";
 $conn = new mysqli($servername, $username, $password, $dbname);
-
 if($conn->connect_error) 
 {
-    die("Connection failed",       $conn->connect_error);
+ die("Connection failed",       $conn->connect_error) ;
 }
 echo "Connected successfully";
 $conn->close();
 ?>
 
-<!Doctypehtml>
+<!Doctype html>
 <html>
 <html lang="en">
 <head>
@@ -23,12 +22,14 @@ $conn->close();
     <title>Gamer  web title </title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
     <p>Profile</p>
-<body style= bgcolor="chroma",border : solid, brown 4 px;
-    color : red, height : 600 px, width : 600 px;
-   height: 600 px ;
+
+<body style = bgcolor="chroma", border : solid, brown 4 px; 
+    color : red, height : 600 px, width:600 px;
+   height: 600 px;
    resize ="auto";>
-    <div id = "container" style= "border: solid  double 4px orange ; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
+    <div id = "container" style = "border: solid  double 4px orange; padding = 4 px ; margin  = 5 px solid flex-wrap: flex; border-radius: 3px;
  gray">
  <p>
 <img src = "mecharena (1).png" ,alt = "mecharena">
@@ -42,12 +43,9 @@ Game Display Table
       
     </style>
 </head>
-
 <body>
 <h2>Game Entry Form</h2>
-
 <form id="gameForm">
-
     <label for="title">Game Title:</label>
     <input type="text" id="title" required>   
     <label for="genre">Genre:</label>
@@ -56,11 +54,8 @@ Game Display Table
     <input type="number" id="year" required>
     <button type="submit">Add Game</button>
 </form>
-
 <h2>Game Display Table</h2>
-
 <table id="gameTable">
-
     <thead>
         <tr>
             <th>Game Title</th>
