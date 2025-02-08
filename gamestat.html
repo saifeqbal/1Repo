@@ -7,12 +7,11 @@ $dbname = "tablen.sql";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error) 
 {
- die("Connection failed",       $conn->connect_error) ;
+ die("Connection failed",       $conn->connect_error);
 }
 echo "Connected successfully";
 $conn->close();
 ?>
-
 <!Doctype html>
 <html>
 <html lang="en">
@@ -36,13 +35,16 @@ $conn->close();
 </p>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
     <title>
 Game Display Table
 </title>
+
     <style>
       
     </style>
 </head>
+
 <body>
 <h2>Game Entry Form</h2>
 <form id="gameForm">
