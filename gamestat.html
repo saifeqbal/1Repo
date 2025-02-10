@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Statistics</title>
-</head<>HTML>
+</head>
 <body>
 <head>
 <div id = "container"> 
-<img src= "Tekken.jpg">
+<img src= "Tekken8.jpg">
 <img src="callofdragon.png">
 </div>
 <div id="header">
@@ -32,11 +32,10 @@ tekken
 call of dragons 
 </p> 
 </div>
-<div id = "footer" style = "background-colour: "blue" border : black solid 3px, bg-color: black ,margin= 2 , 3px /  >
+<div id = "footer" style = "background-colour: "blue" border : black solid 3px, bg-color: black ,margin= 3px /  >
 </head>
 </body>
 </html>
-
 <style>
 table {
             width: 100%;
@@ -47,33 +46,25 @@ table {
             padding: 8px;
             text-align: left;
         }
-
         th {
             background-color: #f2f2f2;
 container
 { 
-    
  bg-colour is =orange ,font-colour = orange;  size= to 50 px;
  }
  </style>
     <h1>Game Statistics</h1>
-    
     <?php
     $servername = "localhost";
     $username = "username";
     $password = "password";
     $dbname = "database";
-
-    
     $conn = new mysqli($servername, $username, $password, $dbname);
-
-
-    if ($conn->connect_error) {
+    if ($conn->connect_error)
+ {
         die("Connection failed: " . $conn->connect_error);
     }
     echo "Connected successfully";
-
-    
     $conn->close();
     ?>
 </body>
