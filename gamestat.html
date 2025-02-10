@@ -32,6 +32,70 @@ tekken
 call of dragons 
 </p> 
 </div>
+//new dialog for gamers 
+<style>
+        /* Basic styling for the dialog box */
+        dialog {
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Current Gamers Online</h1>
+
+<button onclick="showGamersDialog()">View Gamers</button>
+
+<dialog id="gamersDialog">
+    <h2>Gamers Online</h2>
+    <ul id="gamersList">
+        <!-- List will be populated with JavaScript -->
+    </ul>
+    <button onclick="closeDialog()">Close</button>
+</dialog>
+<script>
+function showGamersDialog() {
+    const dialog = document.getElementById('gamersDialog');
+    const list = document.getElementById('gamersList');
+    list.innerHTML = ''; // Clear previous entries
+
+    // Sample data (replace with actual data fetching from your backend)
+    const gamers = [
+        { username: "Player1", game: "Call of Duty" },
+        { username: "Player2", game: "Minecraft" },
+        { username: "Player3", game: "League of Legends" },
+        { username: "Player4", game: "Fortnite" }
+    ];
+    gamers.forEach(gamer => 
+{
+        let item = document.createElement('li');
+        item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
+        list.appendChild(item);
+    });
+
+    dialog.showModal();
+}
+function closeDialog() { document.getElementById('gamersDialog').close();
+}
+</script>
+<p>Current Gamers Online
+<p>View Gamers
+</p>
 <div id = "footer" style = "background-colour: "blue" border : black solid 3px, bg-color: black ,margin= 3px /  >
 </head>
 </body>
