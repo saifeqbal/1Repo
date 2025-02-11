@@ -11,11 +11,11 @@ background: "blue";
 }
 section:
 { 
-background-color:#F0ppp ;
+background-color:#F0ppp;
 padding: 9 px;
 color:;
 } 
- 
+ h
 {
 bgcolor:"orange";
 }
@@ -24,7 +24,6 @@ head:
 {
 text-style:"Latin"; 
 background-color:"orange"; 
-
 }
 h1:
 {
@@ -42,7 +41,7 @@ h1:
 text-align:"center";
 font-size:"90px ";
 }
-container{
+header, container{
 border: solid green 3px ;
 border-margin: gray solid 4 px;
 margin:9px;
