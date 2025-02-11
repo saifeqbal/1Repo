@@ -41,7 +41,7 @@ h1:
 text-align:"center";
 font-size:"90px ";
 }
-header, container{
+ container{
 border: solid green 3px ;
 border-margin: gray solid 4 px;
 margin:9px;
