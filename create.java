@@ -4,9 +4,8 @@ import java.io.*;
 import java.lang.html;
 import java.sql.connction;
 {
-import SQL.connection;
+import java.SQL.connection;
 import java.connection.sql;
-import java.sql.connection;
 username
 {
 "saif","eqbal",
