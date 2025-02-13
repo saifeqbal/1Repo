@@ -7,5 +7,5 @@ insert row[("kobl"),(" wanb "),("vct") , varchar ("64"), values ("37","45","26")
 insert row ("amia",varchar("45") , ("32"), ];
 insert row[("cifa" varchar("53"),values  ("43,"28","32")];
 insert row [("clothes"), ("cholor") ("shoes")varchar ("32"), values("shirt")];
-
+insert row [("ac"),("fu"),  values("16"),varchar("16")];
 
