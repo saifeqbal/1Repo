@@ -6,6 +6,6 @@ insert column ["wshapeman " varchar 32 values ("character") , ("values") ,("figu
 insert row[("kobl"),(" wanb "),("vct") , varchar ("64"),values ("37","45","26")];
 insert row ("amia",varchar("16") , ("32"), ];
 insert row[("cifa" varchar("64"),values  ("43,"28","32")];
-insert row [("clothes"),("cholor"), ("shoes") varchar ("32"),values("shirt")];
-insert row [("ac"),("fu"), varchar("16") ];
+insert row [("clothes"),("cholor"), ("shoes"), varchar ("32"),values("shirt")];
+insert row [("ac"),("fu"), varchar("16")  ];
 
