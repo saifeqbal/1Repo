@@ -23,6 +23,7 @@
             background-color: #f4f4f4;
             text-align: center;
             padding: 50px;
+          
         }
         .container 
     {
@@ -30,12 +31,14 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ 
         }
     
         .count 
     {
             font-size: 2em;
             color: #4CAF50;
+            float: center, hover,56px;
         }
     </style>
 </head>
@@ -49,10 +52,11 @@
     // Simulate fetching the number of logged-in gamers
     function fetchLoggedInGamers() {
         // This is just a simulation. Replace this with an actual API call.
-        return Math.floor(Math.random() * 100); // Random number between 0 and 99
+        return Math.floor(gamerCount); // Random number between 0 and 99
     }
 
-    function updateGamerCount() {
+    function updateGamerCount()
+ {
         const countElement = document.getElementById('gamerCount');
         const loggedInGamers = fetchLoggedInGamers();
         countElement.textContent = loggedInGamers;
@@ -62,6 +66,7 @@
     setInterval(updateGamerCount, 5000);
     // Initial count update
     updateGamerCount();
+   
 </script>
 
 </body>
