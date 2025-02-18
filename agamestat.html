@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
     </script>    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>   
-   
+
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamers Logged In</title>
     <style>
-
         body 
     {
             font-family: Arial, sans-serif;
@@ -26,6 +25,7 @@
           
         }
         .container 
+
     {
             background: #fff;
             padding: 20px;
@@ -33,7 +33,6 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
  
         }
-    
         .count 
     {
             font-size: 2em;
@@ -44,6 +43,7 @@
 </head>
 <body>
 <div class="container">
+
     <h1>Gamers Logged In</h1>
     <div class="count" id="gamerCount">0</div>
 </div>
@@ -53,38 +53,33 @@
         // This is just a simulation. Replace this with an actual API call.
         return Math.floor(gamerCount); // Random number between 0 and 99
     }
-
     function updateGamerCount()
  {
         const countElement = document.getElementById('gamerCount');
         const loggedInGamers = fetchLoggedInGamers();
         countElement.textContent = loggedInGamers;
     }
-
     // Update the count every 5 seconds
     setInterval(updateGamerCount, 5000);
     // Initial count update
     updateGamerCount();
    
 </script>
-
 </body>
 </html>
-
-    
-    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
 <body>   
 <div class="container mt-5">
     <h2>Gamers Log</h2>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gamersModal">
-        <d
+      
         Show Logged Gamers
     </button>
     <!-- Modal -->
+
     <div class="modal fade" id="gamersModal" tabindex="-1" role="dialog" aria-labelledby="gamersModalLabel" aria-hidden="true">
+
         <div class="modal-dialog" 
             role="document">
             <div class="modal-content">
@@ -93,9 +88,10 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times
 </span>
+
                     </button>
                 </div>
-                
+
                 <div class="modal-body">
                     <table class="table">
                         <thead>
@@ -131,6 +127,7 @@
                             </tr>
                             <tr id=" game6">
                     <td>4</td>
+
                                 <td>GamerFour</td>
                                 <td id="game7">3567</td>
                                <td>2023-10-04</td>
@@ -138,7 +135,7 @@
                         </tbody>
                     </table>
                 </div>
-                
+  
                 <div class="modal-footer">
                     <button type="button" class="btn,btn-secondary", data-dismiss="modal">Close</button>
                 </div>
@@ -146,6 +143,7 @@
         </div>
     </div>
 </div>
+
 <head>    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,7 +172,6 @@
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
-
             <form id="contact-form">
                 <input type="text" placeholder="Your Name" required>
                 <input type="email" placeholder="Your Email" required>
@@ -186,7 +183,6 @@
     <footer>
         <p>&copy; 2023 Gaming Site</p>
     </footer>
-
     <script src="script.js">
     // script.js
 // Array to hold the list of games
@@ -201,10 +197,14 @@ const games = [];
     }
 function displayGames() 
     {     
+
     const gameList = 
     document.getElementById('game','i');
+
         for(i= 1; i<6, i++);
-    gameList.innerHTML='';     
+
+    gameList.innerHTML='';  
+   
         // Clear the current list
     games.forEach((game,index) => 
 {
@@ -214,22 +214,26 @@ function displayGames()
     });
 }
 // Function to add a game to the list
+
 function addGame()
        {
     const gameNameInput = document.getElementById('gameName');
     const gameName = gameNameInput.value.trim();
-    if (gameName === '') {
+    if (gameName === '') 
+{
         alert('Please enter a game name.');
         return;
     }
-    games.push(gameName); // Add the game to the array
-    displayGames(); // Update the displayed list
+    games.push(gameName); 
+// Add the game to the array
+    displayGames();
+ // Update the displayed list
     // Clear the input field
     gameNameInput.value = '';
 }
 // Add event listener to the button
+
 document.getElementById('addGameButton').addEventListener('click',addGame);
     </script>
 </body>
 </html>
-
