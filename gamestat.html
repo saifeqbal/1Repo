@@ -5,6 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Statistics</title>
+
+<script>
+
+// Create a ul element to hold the list of games
+const gameList = document.createElement("ul");
+document.body.appendChild(gameList);
+
+// Function to add a game to the list
+function addGame() 
+{
+    const gameName = prompt("Enter the name of the game:");
+    if (gameName)
+ {
+        const listItem = document.createElement("li");
+        listItem.textContent = gameName;
+        gameList.appendChild(listItem);
+    }
+
+}
+
 <body>
 <div id = "container"> 
 <img src= "Tekken8.jpg">
