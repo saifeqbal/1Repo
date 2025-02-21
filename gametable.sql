@@ -27,7 +27,6 @@ insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("ex
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Database Display</title>
     <style>
-
         table
  {
             border-collapse: collapse;
@@ -35,27 +34,27 @@ insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("ex
             margin: 20px auto;
  }
         
-        th, td
+      th,td
  {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
  }
         
-        th 
+   th 
 {
             background-color: #f2f2f2;
-  }
+}
         
-        tr:nth-child(even) 
+   tr:nth-child(even) 
 {
             background-color: #f9f9f9;
-  }
+}
     </style>
 </head>
 <body>
     <h1>Data Display</h1>
-    <?php
+ <?php
     // Database connection parameters
     $servername = "localhost";
     $username = "root";
