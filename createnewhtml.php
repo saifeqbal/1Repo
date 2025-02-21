@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$dbname = "gamestat.html";
+$dbname = "tablen.sql";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,7 +14,7 @@ if ($conn->connect_error)
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT id, name, age, occupation FROM your_table";
+$sql = "SELECT wman, kobl, age, occupation FROM tablen.sql";
 $result = $conn->query($sql);
 
 $data = array();
