@@ -4,21 +4,21 @@ header('Content-Type: application/json');
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$dbname = "tablen.sql";
+$dbname = "gametable.sql";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) 
 {
-    die("Connection failed: " . $conn->connect_error);
+    die("Connection failed:" . $conn->connect_error);
 }
 
-$sql = "SELECT wman, kobl, age, occupation FROM tablen.sql";
+$sql = "SELECT wman,kobl, FROM tablen.sql";
 $result = $conn->query($sql);
 
 $data = array();
-if ($result->num_rows > 0)
+if ($result->num_rows>0)
  {
     // Output data of each row
     while($row = $result->fetch_assoc()) {
