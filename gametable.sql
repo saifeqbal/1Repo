@@ -10,4 +10,8 @@ insert row [("clothes"),("cholor"), ("shoes"), varchar ("32"),values("shirt")];
 insert row [("ac"),("fu"), varchar("16") values("a"),("70")];
 insert row ["size",varchar("32"), values ("24""45","56") ]; 
 
-indert row [ "debrt",varchar(56),values(45) ]
+insert row ["debrt", varchar(56) ,values("24"),("23"),("45"),("66")];
+insert column [clov, character(256), values("tp","sirt","bar")];
+insert column [ character char,
+
+
