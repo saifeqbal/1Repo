@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamers Log</title>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">  
- 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
     </script>    
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>   
  
 <html lang="en">
@@ -18,7 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamers Logged In</title>
     <style>
-
         body 
     {
             font-family: Arial, sans-serif;
@@ -91,7 +89,40 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times
 </span>
+<?php
+header('Content-Type: application/json');
 
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "database_name";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// SQL query to fetch data
+$sql = "SELECT id, name, age, occupation FROM your_table";
+$result = $conn->query($sql);
+
+$data = array();
+if ($result->num_rows > 0) {
+    // Output data of each row
+    while($row = $result->fetch_assoc()) {
+        $data[] = $row;
+    }
+} else {
+    echo json_encode([]);
+    exit;
+}
+$conn->close();
+
+echo json_encode($data);
+?>
                     </button>
                 </div>
                 <div class="modal-body">
