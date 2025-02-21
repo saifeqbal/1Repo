@@ -8,4 +8,6 @@ insert row ("amia",varchar("16") , ("32"), ];
 insert row[("cifa" varchar("64"),values  ("43", "28","32")];
 insert row [("clothes"),("cholor"), ("shoes"), varchar ("32"),values("shirt")];
 insert row [("ac"),("fu"), varchar("16") values("a"),("70")];
+insert row ["size",varchar("32"), values ("24""45","56") ]; 
 
+indert row [ "debrt",varchar(56),values(45) ]
