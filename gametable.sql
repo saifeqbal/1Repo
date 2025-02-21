@@ -12,6 +12,8 @@ insert row ["size",varchar("32"), values ("24""45","56") ];
 
 insert row ["debrt", varchar(56) ,values("24"),("23"),("45"),("66")];
 insert column [clov, character(256), values("tp","sirt","bar")];
-insert column [ character char,
+insert column [ (character), char(
+("48"), values("56","6")];
+
 
 
