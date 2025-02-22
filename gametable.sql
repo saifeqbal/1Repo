@@ -17,10 +17,10 @@ insert column [(character),char(
 ("48"),values("56","6")];
 
 insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("exception"),("selery"),("boogh")];
-insert row[ crow"," salary "];
-
-
-
+insert row["cw","salary"] ;
+insert row ["coob" , enum("1") ,  
+values("2" ), ("enu")];
+ 
 //html//
 <!DOCTYPE html>
 <html lang="en">
@@ -52,16 +52,18 @@ insert row[ crow"," salary "];
 {
             background-color: #f9f9f9;
 }
+
     </style>
 </head>
 <body>
     <h1>Data Display</h1>
+
  <?php
     // Database connection parameters
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "tablen.sql";
+    $servername ="localhost";
+    $username = "";
+    $password ="  ";
+    $dbname="tablen.sql";
     try 
 ⁸{
         // Create connection
@@ -71,17 +73,21 @@ insert row[ crow"," salary "];
 
         
         // SQL query
-        $sql = "SELECT id, name, email FROM users";
+        $sql = "SELECT wbase , kroll , wbasename FROM users";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         
         // Display results in table
         echo "<table>";
-        echo "<tr><th>ID</th><th>Name</th><th>Email</th></tr>";
-        while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+        echo"<tr><th>ID</th><th>
+Name</th><th>
+Email
+</th></tr>
+;
+  while($row = $stmt-> fetch(PDO::FETCH_ASSOC))
  {
-            echo "<tr>";
-            echo "<td>" . htmlspecialchars($row['id']) . "</td>";
+            echo"<tr>";
+            echo"<td>" . htmlspecialchars($row['id']) . "</td>";
             echo "<td>" . htmlspecialchars($row['name']) . "</td>";
             echo "<td>" . htmlspecialchars($row['email']) . "</td>";
             echo "</tr>";
