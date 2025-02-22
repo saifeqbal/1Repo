@@ -11,13 +11,13 @@ insert row [("ac"),("fu"), varchar("16") values("a"),("70")];
 insert row ["size",varchar("32"), values ("24""45","56")]; 
 
 insert row ["debrt", varchar(56) ,values("24"),("23"),("45"),("66")];
-insert column [clov, character(256), values("tp","sirt","bar")];
+insert column [clov ,character(256), values("tp","sirt","bar")];
 
 insert column [(character),char(
 ("48"),values("56","6")];
 
 insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("exception"),("selery"),("boogh")];
-
+insert row[ crow"," salary "];
 
 
 
