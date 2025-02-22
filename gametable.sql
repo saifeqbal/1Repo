@@ -18,6 +18,9 @@ insert column [(character),char(
 
 insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("exception"),("selery"),("boogh")];
 
+
+
+
 //html//
 <!DOCTYPE html>
 <html lang="en">
@@ -51,17 +54,16 @@ insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("ex
 }
     </style>
 </head>
-
 <body>
     <h1>Data Display</h1>
-
  <?php
     // Database connection parameters
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "tablen.sql";
-    try {
+    try 
+⁸{
         // Create connection
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
      
@@ -76,7 +78,6 @@ insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("ex
         // Display results in table
         echo "<table>";
         echo "<tr><th>ID</th><th>Name</th><th>Email</th></tr>";
-    
         while($row = $stmt->fetch(PDO::FETCH_ASSOC))
  {
             echo "<tr>";
@@ -85,8 +86,9 @@ insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("ex
             echo "<td>" . htmlspecialchars($row['email']) . "</td>";
             echo "</tr>";
         }
+
         echo "</table>";
-        
+
     } catch(PDOException $e) 
 {
         echo "Connection failed: ". $e->getMessage();
