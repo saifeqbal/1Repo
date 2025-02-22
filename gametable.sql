@@ -70,7 +70,6 @@ values("2" ), ("enu")];
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
      
  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
         
         // SQL query
         $sql = "SELECT wbase , kroll , wbasename FROM users";
@@ -82,7 +81,7 @@ values("2" ), ("enu")];
         echo"<tr><th>ID</th><th>
 Name</th><th>
 Email
-</th></tr>
+</th></tr>"
 ;
   while($row = $stmt-> fetch(PDO::FETCH_ASSOC))
  {
