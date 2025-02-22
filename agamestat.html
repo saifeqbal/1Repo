@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamers Log</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
-
     </script>   
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>   
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Gamers Logged In</title>
     <style>
+
         body 
     {
             font-family: Arial, sans-serif;
@@ -26,7 +24,6 @@
             padding: 50px;
           
         }
-
         .container 
 
     {
@@ -34,7 +31,6 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
         }
         .count 
     {
@@ -42,27 +38,31 @@
             color: #4CAF50;
             float: center, hover,56px;
    }
+
     </style>
+
 </head>
+
 <body>
 <div class="container">
+
     <h1>Gamers Logged In</h1>
     <div class="count" id="gamerCount">0</div>
-</div>
 
+</div>
 <script>
     // Simulate fetching the number of logged-in gamers
     function fetchLoggedInGamers() 
 {
         // This is just a simulation. Replace this with an actual API call.
         return Math.floor(gamerCount); // Random number between 0 and 99
-    }
+}
     function updateGamerCount()
  {
         const countElement = document.getElementById('gamerCount');
         const loggedInGamers = fetchLoggedInGamers();
         countElement.textContent = loggedInGamers;
-    }
+}
     // Update the count every 5 seconds
     setInterval(updateGamerCount, 5000);
     // Initial count update
@@ -70,9 +70,8 @@
 </script>
 </body>
 </html>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+</script>
 </head>
 
 <body>   
