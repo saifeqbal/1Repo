@@ -19,6 +19,6 @@ if ($conn->connect_error)
 }
 echo "Connected successfully";
 $conn->close();
-$sqlquery={select
+$sqlquery={ select "wbase" from table "gametable.sql"}
 ?>
 
