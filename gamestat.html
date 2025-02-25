@@ -7,7 +7,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Statistics</title>
-
 <script>
 create button element 
 constant Element = 
@@ -16,7 +15,6 @@ document.innerHtml("Add game");
 const gameList = document.createElement("ul");
 document.body.appendChild(gameList);
 // Function to add a game to the list
-
 function addGame() 
 {
     const gameName = prompt("Enter the name of the game:");
@@ -27,7 +25,6 @@ function addGame()
         gameList.appendChild(listItem);
     }
 }
-
 <body>
 <div id = "container"> 
 <img src= "Tekken8.jpg">
@@ -76,8 +73,6 @@ call of dragons
             margin-bottom: 10px;
         }
     </style>
-
-
 <h1>Current Gamers Online</h1>
 <button onclick="showGamersDialog()">View Gamers</button>
 <dialog id="gamersDialog">
@@ -87,14 +82,12 @@ call of dragons
     </ul>
     <button onclick="closeDialog()">Close</button>
 </dialog>
-
 <script>
 function showGamersDialog() 
 {
     const dialog = document.getElementById('gamersDialog');
     const list = document.getElementById('gamersList');
     list.innerHTML = ''; // Clear previous entries
-
     // Sample data (replace with actual data fetching from your backend)
     const gamers = [
         { username: "Player1", game:  "" },
