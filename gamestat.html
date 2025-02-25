@@ -23,7 +23,9 @@ function addGame()
       const listItem = document.createElement("li");
         listItem.textContent = gameName;
         gameList.appendChild(listItem);
+
     }
+console.log("gameName");
 }
 <body>
 <div id = "container"> 
@@ -90,7 +92,7 @@ function showGamersDialog()
     list.innerHTML = ''; // Clear previous entries
     // Sample data (replace with actual data fetching from your backend)
     const gamers = [
-        { username: "Player1", game:  "" },
+        { username: "Player1", game:  "Call of dragons" },
         { username: "Player2", game: "tekken" },
         { username: "Player3", game: "Ronin" },
         { username: "Player4", game: "street fighter" }
@@ -101,6 +103,7 @@ function showGamersDialog()
         item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
         list.appendChild(item);
     });
+console.log("GamersList");
     dialog.showModal();
 }
 function closeDialog() { document.getElementById('gamersDialog').close();
