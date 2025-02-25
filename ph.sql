@@ -10,11 +10,24 @@ CREATE TABLE Pictures (
     UploadDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE Users 
+(
+    UserID INT AUTO_INCREMENT PRIMARY KEY,
+    Username VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL UNIQUE,
+    PasswordHash VARCHAR(255) NOT NULL,
+    FirstName VARCHAR(255),
+    LastName VARCHAR(255),
+    DateOfBirth DATE,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Example of how to insert an image into the table
 -- Note: Here, '?' is used as a placeholder for prepared statements in many SQL dialects
 -- You would replace '?' with your actual data or use parameters in your application
 INSERT INTO Pictures (FileName, FileType, FileSize, ImageData) 
 VALUES (?, ?, ?, ?);
+
 
 -- Example to retrieve an image
 SELECT ImageData FROM Pictures WHERE PictureID = ?;
@@ -26,3 +39,5 @@ WHERE PictureID = ?;
 
 -- Example to delete an image
 DELETE FROM Pictures WHERE PictureID = ?;
+
+
