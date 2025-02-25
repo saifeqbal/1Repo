@@ -11,7 +11,6 @@ insert row [("ac"),("fu"), varchar("16") values("a"),("70")];
 insert row ["size",varchar("32"), values ("24""45","56")]; 
 
 insert row ["debrt", varchar(56) ,values("24"),("23"),("45"),("66")];
-
 insert column [clov ,character(256), values("tp","sirt","bar")];
 
 insert column [(character),char(
@@ -19,9 +18,11 @@ insert column [(character),char(
 
 insert row["change", char("56","67", "56"), varchar("32") ,values ("fail"), ("exception"),("selery"),("boogh")];
 insert row["cw","salary"] ;
+
 insert row ["coob" ,enum("1") ,  
 values("2" ), ("enu")];
-insert row ["ters",varchar("256"), into table [];
+insert row ["fotm", varchar(53), values ("nbr"),("noh"), ("noutr") ]; 
+ into table  insert row ["ters",varchar("256"), into table [];
 insert table [("gametableusers")] into database ["gametableusers"];
 
 //html//
