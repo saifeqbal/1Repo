@@ -103,7 +103,9 @@ function showGamersDialog()
         item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
         list.appendChild(item);
     });
-console.log("GamersList");
+console.log(document.getElementById.innerHtml("GamersList"));
+console.log(document.getElementById.innerHtml("GamersDialog"));
+
     dialog.showModal();
 }
 function closeDialog() { document.getElementById('gamersDialog').close();
@@ -132,11 +134,20 @@ table
 
         th 
 {
-            background-color: #f2f2f2;
+            background-color: #f2f2f2;}
+
+
 container
 { 
- bg-colour is =orange ,font-colour = orange;  size = 50 px;
- }
+ bg-colour =orange ,font-colour = orange; size = 50 px;
+border-style=rounded ,
+border: box-border;
+trasparency: 30%;
+background-shade:"green";
+flow: fade-in;
+overflow: 2 s;
+}
+}
  </style>
     <h1>Game Statistics</h1>
     <?php
