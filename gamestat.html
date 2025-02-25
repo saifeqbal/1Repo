@@ -9,18 +9,16 @@
 create button element 
 constant Element = 
 document.innerHtml("Add game");
-
 // Create a ul element to hold the list of games
-
 const gameList = document.createElement("ul");
 document.body.appendChild(gameList);
 // Function to add a game to the list
 function addGame() 
 {
     const gameName = prompt("Enter the name of the game:");
+
     if (gameName)
  {
-  
       const listItem = document.createElement("li");
         listItem.textContent = gameName;
         gameList.appendChild(listItem);
@@ -74,7 +72,6 @@ call of dragons
             margin-bottom: 10px;
         }
     </style>
-
 <body>
 <h1>Current Gamers Online</h1>
 <button onclick="showGamersDialog()">View Gamers</button>
@@ -96,19 +93,22 @@ function showGamersDialog()
     const gamers = [
         { username: "Player1", game:  "" },
         { username: "Player2", game: "tekken" },
-        { username: "Player3", game: "Ronin" },
-        { username: "Player4", game: "street fighter" }
+       
+ { username: "Player3", game: "Ronin" },
+        
+{ username: "Player4", game: "street fighter" }
     ];
+
     gamers.forEach(gamer => 
 {
         let item = document.createElement('li');
         item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
         list.appendChild(item);
     });
-
     dialog.showModal();
 }
-function closeDialog() { document.getElementById('gamersDialog').close();
+function closeDialog() {
+ document.getElementById('gamersDialog').close();
 }
 </script>
 <p>Current Gamers Online
@@ -145,7 +145,7 @@ container
     $servername = "localhost";
     $username = "username";
     $password = "password";
-    $dbname = "database";
+    $dbname = "gametablen.sql";
     $conn = new mysqli($servername, $username, $password, $dbname);
     if ($conn->connect_error)
  {
