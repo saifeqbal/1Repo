@@ -5,274 +5,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gamers Log</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
-    </script>   
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>   
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamers Logged In</title>
-    <style>
-
-        body 
-    {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-          
-        }
-        .container 
-
-    {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .count 
-    {
-            font-size: 2em;
-            color: #4CAF50;
-            float: center, hover,56px;
-   }
-
-    </style>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> 
 </head>
-
 <body>
-<div class="container">
-
-    <h1>Gamers Logged In</h1>
-    <div class="count" id="gamerCount">0</div>
-
-</div>
-<script>
-    // Simulate fetching the number of logged-in gamers
-    function fetchLoggedInGamers() 
-{
-        // This is just a simulation. Replace this with an actual API call.
-        return Math.floor(gamerCount); // Random number between 0 and 99
-}
-    function updateGamerCount()
- {
-        const countElement = document.getElementById('gamerCount');
-        const loggedInGamers = fetchLoggedInGamers();
-        countElement.textContent = loggedInGamers;
-}
-    // Update the count every 5 seconds
-    setInterval(updateGamerCount, 5000);
-    // Initial count update
-    updateGamerCount();
-</script>
-</body>
-</html>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
-</script>
-</head>
-
-<body>   
-<div class="container mt-5">
-    <h2>Gamers Log</h2>
-
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gamersModal">
-     
-        Show Logged Gamers
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="gamersModal" tabindex="-1", role="dialog" aria-labelledby="gamersModalLabel" aria-hidden="true">
-        <div class="modal-dialog" 
-            role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="gamersModalLabel">Logged Gamers</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">
-&times
-</span>
-
-<?php
-header('Content-Type: application/json');
-$servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "gametable.sql";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) 
-{
-    die("Connection failed: " . $conn->connect_error);
-}
-// SQL query to fetch data
-$sql = "SELECT id, name, age, occupation FROM tablen.sql";
-$result = $conn->query($sql);
-
-$data = array();
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while($row = $result->fetch_assoc()) {
-        $data[] = $row;
-    }
-} else {
-    echo json_encode([]);
-    exit;
-}
-$conn->close();
-
-echo json_encode($data);
-?>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Gamer Tag</th>
-                                <th>Score</th>
-                                <th>Last Logged In</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td id ="game1">GamerOne
-                                  
-                                </td>
-   "Gamers">      
-                    <td id = "Gamer1">5000</td>
-                                <td>2023-10-01</td>
-                            </tr>
-
-                            <tr id = "Game1">
-                                <td>2</td>
-                                <td>GamerTwo</td>
-                                <td id= "game3">3000</td>
-                                <td>2023-10-02</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td id ="game4">GamerThree</td>
-                                <td id= "game5">
-                                 4789
-                                </td>
-                                <td>2023-10-03</td>
-                            </tr>
-                            <tr id=" game6">
-                    <td>4</td>
-
-                                <td>Game4</td>
-                                <td id="game7">3567</td>
-                               <td>2023-10-04</td>
-                       </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn,btn-secondary", data-dismiss="modal">Close</button>
+    <div class="container mt-5">
+        <h2>Gamers Log</h2>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#gamersModal">
+            Show Logged Gamers
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="gamersModal" tabindex="-1" role="dialog" aria-labelledby="gamersModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="gamersModalLabel">Logged Gamers</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Gamer Tag</th>
+                                    <th>Score</th>
+                                    <th>Last Logged In</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td id="game1">GamerOne</td>
+                                    <td id="Gamer1">5000</td>
+                                    <td>2023-10-01</td>
+                                </tr>
+                                <tr id="Game1">
+                                    <td>2</td>
+                                    <td>GamerTwo</td>
+                                    <td id="game3">3000</td>
+                                    <td>2023-10-02</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td id="game4">GamerThree</td>
+                                    <td id="game5">4789</td>
+                                    <td>2023-10-03</td>
+                                </tr>
+                                <tr id="game6">
+                                    <td>4</td>
+                                    <td>Game4</td>
+                                    <td id="game7">3567</td>
+                                    <td>2023-10-04</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<head>    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Site</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
 
-<body>
-    <header>
-        <h1>Welcome to the Gaming Site</h1>
-        <nav>
-            <ul>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>       
-    </header>
-    <main>
-        <section id="games">
-            <h2>Available Games</h2>
-            <div id="game-list"></div>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>This is a simple gaming site where you can find various games to play.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Gaming Site</p>
-    </footer>
-    <script src="script.js">
-    // script.js
-// Array to hold the list of games
-const games = [];
-// Function to display the list of games
-   var i =1;
-    for
-    {
-       i;
-        i;i++;
-    }       
-    }
-function displayGames() 
-    {     
+    <div class="container mt-5">
+        <h2>Article Images</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://github.com/saifeqbal/1Repo/blob/main/Galaxiaga.png" class="card-img-top" alt="Article 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Article 1</h5>
+                        <p class="card-text">Description of Article 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://github.com/saifeqbal/1Repo/blob/main/Galaxiaga.png" class="card-img-top" alt="Article 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Article 2</h5>
+                        <p class="card-text">Description of Article 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://github.com/saifeqbal/1Repo/blob/main/Galaxiaga.png" class="card-img-top" alt="Article 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Article 3</h5>
+                        <p class="card-text">Description of Article 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    const gameList = 
-    document.getElementById('game','i');
-
-        for(i= 1; i<6, i++);
-
-    gameList.innerHTML='';  
-   
-        // Clear the current list
-    games.forEach((game,index) => 
-{
-        const listItem = document.createElement('li');
-        listItem.textContent = game;
-        gameList.appendChild(listItem);
-    });
-}
-// Function to add a game to the list
-
-function addGame()
-       {
-    const gameNameInput = document.getElementById('gameName');
-    const gameName = gameNameInput.value.trim();
-    if (gameName === '') 
-{
-        alert('Please enter a game name.');
-        return;
-    }
-    games.push(gameName); 
-// Add the game to the array
-    displayGames();
- // Update the displayed list
-    // Clear the input field
-    gameNameInput.value = '';
-}
-// Add event listener to the button
-
-document.getElementById('addGameButton').addEventListener('click',addGame);
-    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
