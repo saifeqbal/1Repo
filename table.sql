@@ -25,6 +25,7 @@ insert into column  [("games"),values [("vintage games")];
 insert into column[("stats"),values ("gamers Logged on : 1")];
 
 
+
 -- Create a SQL file named 'image_storage.sql'
 -- Create the table for storing pictures
 CREATE TABLE Pictures (
