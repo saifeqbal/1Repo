@@ -1,0 +1,14 @@
+create table gamerstats; 
+create table character stat;
+insert into table gamestats;
+{
+row ["cream"], fil varchar (10), values (39)];
+row ["olodr"] varchar (19), values (19, 39 59);
+row ["color"]  VARCHAR(32)  VALUES (PINK, RED);
+column [charactername ] char 64 values (Jennifer) (Helena);
+column character size character [128] values (16 ,3,128);
+update table character stats{
+column character name  char (16) values (Jennifer, Lena);
+row ["ornaments" char 64 values (handbrace,necklaces )];
+}
+select character name from gamerstats;
