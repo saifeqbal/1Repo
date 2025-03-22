@@ -12,3 +12,6 @@ column character name  char (16) values (Jennifer, Lena);
 row ["ornaments" char 64 values (handbrace,necklaces )];
 }
 select character name from gamerstats;
+select oldr from gamestats if oldr values 19;
+select ornaments from [character stats];
+//
