@@ -15,3 +15,10 @@ select character name from gamerstats;
 select oldr from gamestats if oldr values 19;
 select ornaments from [character stats];
 //
+create table character {
+set primary key binny 
+{
+insert 
+insert colum color_hair [worke 64 values (vink)]
+insert column character specifications varchar(64) 
+insert column character_name(varchar (64)values  ("anything ");
