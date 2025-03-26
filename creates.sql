@@ -15,7 +15,8 @@ select character name from gamerstats;
 select oldr from gamestats if oldr values 19;
 select ornaments from [character stats];
 //
-create table character {
+create table character 
+{
 set primary key binny 
 {
 insert column characterspecies [];
