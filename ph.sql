@@ -40,4 +40,22 @@ WHERE PictureID = ?;
 -- Example to delete an image
 DELETE FROM Pictures WHERE PictureID = ?;
 
+-- Create the articles table
+
+CREATE TABLE articles (
+    article_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL
+);
+
+-- Create the article_images table
+CREATE TABLE article_images 
+(
+    image_id INT AUTO_INCREMENT PRIMARY KEY,
+    article_id INT NOT NULL,
+    image_url VARCHAR(255) NOT NULL ,
+    alt_text VARCHAR(255) NOT NULL ,
+    description TEXT,
+    FOREIGN KEY (article_id) REFERENCES articles(article_id)
+);
 
