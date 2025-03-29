@@ -24,5 +24,5 @@ insert colum color_hair [worke 64 values (vink)]
 insert column character specifications varchar(64) 
 insert column character_name(varchar (64)values  ("anything ");
 insert column new _electronic [varchar (65), values ("5t6")];
-insert video character["make"];
+insert video character[""];
 name["b"];
