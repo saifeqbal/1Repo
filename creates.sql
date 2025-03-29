@@ -23,4 +23,4 @@ insert column characterspecies [];
 insert colum color_hair [worke 64 values (vink)]
 insert column character specifications varchar(64) 
 insert column character_name(varchar (64)values  ("anything ");
-insert column newelectronic [ varchar (65), values ( 56 ) , ];
+insert column newelectronic [varchar (65), values ("5t6 ") ];
