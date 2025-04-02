@@ -51,3 +51,27 @@ WHERE PictureID = ?;
 
 -- Example to delete an image
 DELETE FROM Pictures WHERE PictureID = ?;
+-- Create a new database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS character_data;
+
+-- Use the created database
+USE character_data;
+
+-- Create a table for storing character names and values
+
+CREATE TABLE IF NOT EXISTS characters 
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    value VARCHAR(255) NOT NULL
+);
+-- Insert some sample data into the table
+INSERT INTO characters (name, value) VALUES ('Character1', 'Value1');
+INSERT INTO characters (name, value) VALUES ('Character2', 'Value2');
+INSERT INTO characters (name, value) VALUES ('Character3', 'Value3');
+INSERT INTO characters (name, value) VALUES ('Character4', 'Value4');
+INSERT INTO characters (name, value) VALUES ('Character5', 'Value5');
+-- Query to display all character names and values
+SELECT * FROM characters;
+
+select character from table character;
