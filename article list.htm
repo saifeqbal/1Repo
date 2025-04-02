@@ -123,5 +123,78 @@
       <p>This is the content of article 10.</p>
    </div>
     </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article List with Character View</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+        }
+        main {
+            flex: 1;
+        }
+        .character-view {
+            width: 300px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-left: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container mt-5">
+            <h2>Article Images</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="tekken8.jpg" class="card-img-top" alt="Article 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Article 1</h5>
+                            <p class="card-text">Description of Article 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Galaxiaga.png" class="card-img-top" alt="Article 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Article 2</h5>
+                            <p class="card-text">Description of Article 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="callofdragons.jpg" class="card-img-top" alt="Article 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Article 3</h5>
+                            <p class="card-text">Description of Article 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="character-view">
+        <h2>Character View</h2>
+        <div id="character-info">
+            <!-- SVG Character details will be displayed here -->
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red"/>
+            </svg>
+            <p>Character Name: Example Character</p>
+        </div>
+    </aside>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
 </body>
 </html>
