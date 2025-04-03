@@ -27,5 +27,6 @@ insert column new _electronic [varchar (65), values ("5t6")];
 insert video character[" binny  " varchar (32) values ( "25,32 56"), ];
 insert videocharacter[" "] into table  character
 ;
-insert video character(varchar(16 ) values ("") )
+insert video character(varchar(16 ) values ("cee") )
 into table character; 
+insert video_character (varchar (16) values (" dettu") values (78) into table. characters;
