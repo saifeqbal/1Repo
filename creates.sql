@@ -25,4 +25,4 @@ insert column character specifications varchar(64)
 insert column character_name(varchar (64)values  ("anything ");
 insert column new _electronic [varchar (65), values ("5t6")];
 insert video character[" binny  " varchar (32) values ( "25,32 56"), ];
-insert video character[ ""] into table  
+insert video character["_"] into table  
