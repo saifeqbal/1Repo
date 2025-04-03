@@ -29,4 +29,6 @@ insert videocharacter[" "] into table  character
 ;
 insert video character(varchar(16 ) values ("cee") )
 into table character; 
-insert video_character (varchar (16) values (" dettu") values (78) into table. characters;
+insert video_character (varchar (16) values ("ettu") values (78) into table 
+characters;
+insert  video_character["", varchar (45 ) values (677) ] ;
