@@ -27,15 +27,20 @@ function addGame()
     }
 console.log("gameName");
 }
+
+
+</script>
 <body>
 <div id = "container"> 
 <img src= "Tekken8.jpg">
 <img src="callofdragon.png">
 </div>
+
 <div id="header">
 <img src="MechArena (1).png ">
 <img src="Streetfighter.png">
 <table>
+
 <td>
 game one:tekken
 game two:Street fighter
@@ -54,6 +59,7 @@ call of dragons
 </div>
 //new dialog for gamers 
 <style>
+
         /* Basic styling for the dialog box */
         dialog 
 {
@@ -75,14 +81,17 @@ call of dragons
             margin-bottom: 10px;
         }
     </style>
+
 <h1>Current Gamers Online</h1>
 <button onclick="showGamersDialog()">View Gamers</button>
+
 <dialog id="gamersDialog">
     <h2>Gamers Online</h2>
     <ul id="gamersList">
         <!-- List will be populated with JavaScript -->
     </ul>
     <button onclick="closeDialog()">Close</button>
+
 </dialog>
 <script>
 function showGamersDialog() 
@@ -111,6 +120,7 @@ console.log(document.getElementById.innerHtml("GamersDialog"));
 function closeDialog() { document.getElementById('gamersDialog').close();
 }
 </script>
+
 <p>Current Gamers Online
 <p>View Gamers
 </p>
