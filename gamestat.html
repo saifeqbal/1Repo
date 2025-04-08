@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Game Statistics</title>
+
 <script>
 create button element 
 constant Element = 
@@ -18,13 +20,14 @@ document.body.appendChild(gameList);
 function addGame() 
 {
     const gameName = prompt("Enter the name of the game:");
+
     if (gameName)
  {
       const listItem = document.createElement("li");
         listItem.textContent = gameName;
         gameList.appendChild(listItem);
 
-    }
+}
 console.log("gameName");
 }
 
@@ -33,15 +36,13 @@ console.log("gameName");
 <body>
 <div id = "container"> 
 <img src= "Tekken8.jpg">
-
 <img src="callofdragon.png">
 </div>
 
 <div id="header">
-<img src="MechArena (1).png ">
+<img src="MechArena (1).png">
 <img src="Streetfighter.png">
 <table>
-
 <td>
 game one:tekken
 game two:Street fighter
@@ -55,7 +56,6 @@ tekken
 </tr>
 </table>
 <p>
-
 call of dragons 
 </p> 
 </div>
@@ -75,15 +75,16 @@ call of dragons
 {
             background: rgba(0, 0, 0, 0.5);
         }
-        ul {
+        ul 
+{
             list-style-type: none;
             padding: 0;
         }
-        li {
+        li 
+{
             margin-bottom: 10px;
-        }
+}
     </style>
-
 <h1>Current Gamers Online</h1>
 <button onclick="showGamersDialog()">View Gamers</button>
 
@@ -93,9 +94,10 @@ call of dragons
         <!-- List will be populated with JavaScript -->
     </ul>
     <button onclick="closeDialog()">Close</button>
-
 </dialog>
+
 <script>
+
 function showGamersDialog() 
 {
     const dialog = document.getElementById('gamersDialog');
@@ -114,11 +116,10 @@ function showGamersDialog()
         item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
         list.appendChild(item);
     });
-
 console.log(document.getElementById.innerHtml("GamersList"));
 console.log(document.getElementById.innerHtml("GamersDialog"));
 
-    dialog.showModal();
+dialog.showModal();
 }
 function closeDialog() { document.getElementById('gamersDialog').close();
 }
@@ -130,24 +131,23 @@ function closeDialog() { document.getElementById('gamersDialog').close();
 </head>
 
 <style>
-
 table 
 {
             width: 100%;
             border-collapse: collapse;
-        }
+}
 
         th, td 
 {
             border: 1px solid black;
             padding: 8px;
             text-align: left;
-        }
+ }
 
-        th 
+   th 
 {
-            background-color: #f2f2f2;}
-
+            background-color: #f2f2f2;
+}
 
 container
 { 
@@ -159,8 +159,9 @@ background-shade:"green";
 flow: fade-in;
 overflow: 2 s;
 }
-}
+
  </style>
+
     <h1>Game Statistics</h1>
     <?php
     $servername = "localhost";
@@ -168,13 +169,14 @@ overflow: 2 s;
     $password = "password";
     $dbname = "database";
     $conn = new mysqli($servername, $username, $password, $dbname);
-    if ($conn->connect_error)
+ if ($conn->connect_error)
  {
         die("Connection failed: " . $conn->connect_error);
-    }
+}
     echo "Connected successfully";
     $conn->close();
     ?>
+
 </script>
 </body>
 </html>
