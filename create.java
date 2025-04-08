@@ -11,6 +11,7 @@ username
 "saif","eqbal",
 "java code", 
 };
+
 login : {"nousename"};
 password: {"#1alightning"}
 }
@@ -19,16 +20,17 @@ if(login= "saif ")
 System.out.println("login");
 }
  ("");
-connection{
+connection
+{
 }
 else {return 0};
-
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DatabaseConnection {
+public class DatabaseConnection
+ {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/tablen.sql";
         String user = "yourusername";
@@ -41,6 +43,7 @@ public class DatabaseConnection {
                 System.out.println("Connected to the database!");
             }
         } 
+
 catch (SQLException e)
  {
             System.out.println("An error occurred. Maybe user/password is invalid");
@@ -48,7 +51,8 @@ catch (SQLException e)
         }
     }
 }
-public class Main {
+public class Main 
+{
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
