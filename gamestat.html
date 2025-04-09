@@ -135,18 +135,17 @@ console.log(document.getElementById.innerHtml("GamersDialog"));
 
 dialog.showModal();
 }
-function closeDialog() { document.getElementById('gamersDialog').close();
+
+function closeDialog() { 
+document.getElementById('gamersDialog').close();
 }
 </script>
 
 <p>Current Gamers Online
-
-<p>View Gamers
-</p>
+<p>View Gamers</p>
 <div id = "footer" style =  "background-colour: "blue", border : black solid 3px, bg-color: black , margin= 3px />
 
 </div>
-
 </head>
 <style>
 
@@ -180,8 +179,8 @@ overflow: 2 s;
 }
 
  </style>
-    <h1>Game Statistics</h1>
-
+    
+<h1>Game Statistics</h1>
     <?php
     $servername = "localhost";
     $username = "username";
@@ -195,6 +194,7 @@ overflow: 2 s;
     echo "Connected successfully";
     $conn->close();
     ?>
+
 </script>
 </body>
 </html>
