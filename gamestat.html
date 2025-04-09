@@ -4,13 +4,14 @@
 
 <link rel= "stylesheet" href= "ns.css">
 <meta charset="UTF-8">
-
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="viewport"
+ content="width=device-width, initial-scale=1.0">
 
 <title>
 Game Statistics
-
 </title>
+
+
 
 <script>
 //
@@ -27,22 +28,19 @@ document.body.appendChild(gameList);
 // Function to add a game to the list
 
 function addGame() 
-
 {
     const gameName = prompt("Enter the name of the game:");
 
  if (gameName)
  {
       const listItem =       document.createElement("li");
-        listItem.textContent = gameName;
-        gameList.appendChild(listItem);
+     listItem.textContent = gameName;
+   gameList.appendChild(listItem);
 
 }
 
 console.log("gameName");
-
 }
-
 </script>
 
 <body>
@@ -56,31 +54,12 @@ console.log("gameName");
 <img src="Streetfighter.png">
 </div>
 
-<table>
-<td>
-game one:tekken
-game two:Street fighter
-game three: ronin
-Game 4 :call of dragons 
-Game 5 :super Mario 
-Game 7 :galaxiaga
-</td>
-<tr>
-
-tekken
-
-</tr>
-
-</table>
 <p>
 call of dragons 
 </p> 
-
 </div>
 
-
 //new dialog for gamers
-
 <style>
 
  /* Basic styling for the dialog box */
@@ -92,59 +71,64 @@ call of dragons
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
- }
+ 
+}
         dialog::backdrop 
 {
             background: rgba(0, 0, 0, 0.5);
-   }
+}
         ul 
 {
             list-style-type: none;
             padding: 0;
-    }
+}
         li 
 {
-            margin-bottom: 10px;
+    margin-bottom: 10px;
 }
     </style>
-
 <h1>Current Gamers Online</h1>
-<button onclick="showGamersDialog()">View Gamers</button>
-
+<button onclick="showGamersDialog()">
+View Gamers
+</button>
 <dialog id="gamersDialog">
     <h2>Gamers Online</h2>
     <ul id="gamersList">
      <!-- List will be populated with JavaScript -->
   </ul>
-
   <button onclick="closeDialog()">
-Close </button>
+Close 
+</button>
 </dialog>
-
 <script>
-
 function showGamersDialog() 
 {
     const dialog = document.getElementById('gamersDialog');
     const list = document.getElementById('gamersList');
     list.innerHTML = ''; // Clear previous entries
     // Sample data (replace with actual data fetching from your backend)
-    const gamers = [
-        { username: "Player1", game:  "Call of dragons" },
+//
+    const gamers = 
+[
+        { username: "Player1", game:  "Call of dragons" 
+},
         {
  username: "Player2", game: "tekken" },
-        { username: "Player3", game: "Ronin" },
+        {
+ username: "Player3", game: "Ronin" },
 vi
         {
- username: "Player4", game: "street fighter" }
+ username: "Player4", game: "street fighter"
+ }
     ];
-
  gamers.forEach(gamer => 
+
 {
     let item = document.createElement('li');
         item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
      list.appendChild(item);
-    });
+  
+});
 
 console.log(document.getElementById.innerHtml("GamersList"));
 console.log(document.getElementById.innerHtml("GamersDialog"));
@@ -152,38 +136,40 @@ dialog.showModal();
 }
 function closeDialog() 
 { 
-document.getElementById('gamersDialog').close();
+document.getElementById('gamersDialog').close()
 }
-
 </script>
 <p>Current Gamers Online
 <p>View Gamers</p>
-<div id = "footer" style =  "background-colour: "blue", border : black solid 3px, bg-color: black , margin= 3px />
 
+<div id = "footer" style =  "background-colour: "blue", border : black solid 3px, bg-color: black , margin= 3px />
 </div>
+
+<div id= "container ", style = box-style= "glow">
+
 </head>
 
 <style>
+
+
 table 
 {
             width: 100%;
             border-collapse: collapse;
 }
 
-        th, td 
+       th, td 
 {
             border: 1px solid black;
             padding: 8px;
             text-align: left;
- }
+}
 
 th 
 {
-            background-color: #f2f2f2;
+background-color: #f2f2f2;
 }
-
 container
-
 { 
  bg-colour =orange ,font-colour = orange; size = 50 px;
 border-style=rounded ,
@@ -213,5 +199,7 @@ overflow: 2 s;
     ?>
 
 </script>
+
 </body>
+
 </html>
