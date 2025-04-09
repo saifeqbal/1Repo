@@ -3,11 +3,11 @@
 <head>
 
 <link rel= "stylesheet" href= "ns.css">
-    <meta charset="UTF-8">
+       <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Game Statistics</title>
+ <title>Game Statistics</title>
 
 <script>
 //
@@ -21,20 +21,25 @@ document.innerHtml("Add game");
 const gameList = document.createElement("ul");
 document.body.appendChild(gameList);
 // Function to add a game to the list
+
 function addGame() 
+
 {
     const gameName = prompt("Enter the name of the game:");
 
     if (gameName)
  {
-      const listItem = document.createElement("li");
+      const listItem =       document.createElement("li");
         listItem.textContent = gameName;
         gameList.appendChild(listItem);
 
 }
+
 console.log("gameName");
 }
+
 </script>
+
 <body>
 
 <div id = "container"> 
@@ -42,17 +47,14 @@ console.log("gameName");
 <img src="callofdragon.png">
 </div>
 
+
 <div id="header">
-
 <img src="MechArena (1).png">
-
-
 <img src="Streetfighter.png">
-
 </div>
 
-<table>
 
+<table>
 <td>
 game one:tekken
 game two:Street fighter
@@ -70,11 +72,12 @@ call of dragons
 </p> 
 </div>
 
-
 //new dialog for gamers
 <style>
+
  /* Basic styling for the dialog box */
-        dialog 
+        dialog
+ 
 {
             width: 400px;
             border: 1px solid #ccc;
@@ -102,11 +105,10 @@ call of dragons
 <dialog id="gamersDialog">
     <h2>Gamers Online</h2>
     <ul id="gamersList">
-        <!-- List will be populated with JavaScript -->
-    </ul>
-    <button onclick="closeDialog()">Close</button>
+     <!-- List will be populated with JavaScript -->
+  </ul>
+  <button onclick="closeDialog()">Close</button>
 </dialog>
-
 <script>
 
 function showGamersDialog() 
@@ -121,11 +123,11 @@ function showGamersDialog()
         { username: "Player3", game: "Ronin" },
         { username: "Player4", game: "street fighter" }
     ];
-    gamers.forEach(gamer => 
+ gamers.forEach(gamer => 
 {
-        let item = document.createElement('li');
+    let item = document.createElement('li');
         item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
-        list.appendChild(item);
+     list.appendChild(item);
     });
 console.log(document.getElementById.innerHtml("GamersList"));
 console.log(document.getElementById.innerHtml("GamersDialog"));
@@ -135,13 +137,18 @@ dialog.showModal();
 function closeDialog() { document.getElementById('gamersDialog').close();
 }
 </script>
+
 <p>Current Gamers Online
+
 <p>View Gamers
 </p>
-<div id = "footer" style = "background-colour: "blue" border : black solid 3px, bg-color: black ,margin= 3px />
+<div id = "footer" style =  "background-colour: "blue", border : black solid 3px, bg-color: black , margin= 3px />
+
 </div>
+
 </head>
 <style>
+
 table 
 {
             width: 100%;
@@ -172,8 +179,8 @@ overflow: 2 s;
 }
 
  </style>
-
     <h1>Game Statistics</h1>
+
     <?php
     $servername = "localhost";
     $username = "username";
@@ -187,7 +194,6 @@ overflow: 2 s;
     echo "Connected successfully";
     $conn->close();
     ?>
-
 </script>
 </body>
 </html>
