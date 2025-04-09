@@ -42,7 +42,9 @@ function addGame()
 console.log("gameName");
 
 }
+
 </script>
+
 <body>
 <div id = "container"> 
 <img src= "Tekken8.jpg">
@@ -54,7 +56,6 @@ console.log("gameName");
 <img src="Streetfighter.png">
 </div>
 
-
 <table>
 <td>
 game one:tekken
@@ -65,15 +66,21 @@ Game 5 :super Mario
 Game 7 :galaxiaga
 </td>
 <tr>
+
 tekken
+
 </tr>
+
 </table>
 <p>
 call of dragons 
 </p> 
+
 </div>
 
+
 //new dialog for gamers
+
 <style>
 
  /* Basic styling for the dialog box */
@@ -100,6 +107,7 @@ call of dragons
             margin-bottom: 10px;
 }
     </style>
+
 <h1>Current Gamers Online</h1>
 <button onclick="showGamersDialog()">View Gamers</button>
 
@@ -108,8 +116,11 @@ call of dragons
     <ul id="gamersList">
      <!-- List will be populated with JavaScript -->
   </ul>
-  <button onclick="closeDialog()">Close</button>
+
+  <button onclick="closeDialog()">
+Close </button>
 </dialog>
+
 <script>
 
 function showGamersDialog() 
@@ -120,35 +131,39 @@ function showGamersDialog()
     // Sample data (replace with actual data fetching from your backend)
     const gamers = [
         { username: "Player1", game:  "Call of dragons" },
-        { username: "Player2", game: "tekken" },
+        {
+ username: "Player2", game: "tekken" },
         { username: "Player3", game: "Ronin" },
-        { username: "Player4", game: "street fighter" }
+vi
+        {
+ username: "Player4", game: "street fighter" }
     ];
+
  gamers.forEach(gamer => 
 {
     let item = document.createElement('li');
         item.textContent = `${gamer.username} - Playing: ${gamer.game}`;
      list.appendChild(item);
     });
+
 console.log(document.getElementById.innerHtml("GamersList"));
 console.log(document.getElementById.innerHtml("GamersDialog"));
-
 dialog.showModal();
 }
-
-function closeDialog() { 
+function closeDialog() 
+{ 
 document.getElementById('gamersDialog').close();
 }
-</script>
 
+</script>
 <p>Current Gamers Online
 <p>View Gamers</p>
 <div id = "footer" style =  "background-colour: "blue", border : black solid 3px, bg-color: black , margin= 3px />
 
 </div>
 </head>
-<style>
 
+<style>
 table 
 {
             width: 100%;
@@ -162,12 +177,13 @@ table
             text-align: left;
  }
 
-   th 
+th 
 {
             background-color: #f2f2f2;
 }
 
 container
+
 { 
  bg-colour =orange ,font-colour = orange; size = 50 px;
 border-style=rounded ,
@@ -181,6 +197,7 @@ overflow: 2 s;
  </style>
     
 <h1>Game Statistics</h1>
+
     <?php
     $servername = "localhost";
     $username = "username";
