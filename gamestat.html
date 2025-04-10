@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
+
+
+
+
+</head>
 <link rel= "stylesheet" href= "ns.css">
 <meta charset="UTF-8">
  <meta name="viewport"
  content="width=device-width, initial-scale=1.0">
-
 <title>
+
 Game Statistics
+
 </title>
 
 <script>
@@ -67,6 +74,7 @@ call of dragons
             border-radius: 5px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
  
 }
         dialog::backdrop 
@@ -83,19 +91,23 @@ call of dragons
     margin-bottom: 10px;
 }
     </style>
+
 <h1>Current Gamers Online</h1>
 <button onclick="showGamersDialog()">
 View Gamers
 </button>
+<header>
 <dialog id="gamersDialog">
     <h2>Gamers Online</h2>
     <ul id="gamersList">
      <!-- List will be populated with JavaScript -->
   </ul>
+
   <button onclick="closeDialog()">
 Close 
 </button>
 </dialog>
+
 <script>
 function showGamersDialog() 
 {
@@ -135,6 +147,7 @@ function closeDialog()
 document.getElementById('gamersDialog').close()
 }
 </script>
+
 <p>Current Gamers Online
 <p>View Gamers</p>
 
@@ -144,10 +157,7 @@ document.getElementById('gamersDialog').close()
 <div id= "container ", style = box-style= "glow">
 
 </head>
-
 <style>
-
-
 table 
 {
             width: 100%;
@@ -177,8 +187,10 @@ overflow: 2 s;
 }
 
  </style>
-    
+   
 <h1>Game Statistics</h1>
+
+<header>
 
     <?php
     $servername = "localhost";
