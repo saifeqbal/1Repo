@@ -158,6 +158,7 @@ document.getElementById('gamersDialog').close()
 
 </head>
 <style>
+
 table 
 {
             width: 100%;
@@ -190,20 +191,7 @@ overflow: 2 s;
    
 <h1>Game Statistics</h1>
 
-
-    <?php
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "database";
-    $conn = new mysqli($servername, $username, $password, $dbname);
- if ($conn->connect_error)
- {
-        die("Connection failed: " . $conn->connect_error);
-}
-    echo "Connected successfully";
-    $conn->close();
-    ?>
+    
 
 </script>
 
