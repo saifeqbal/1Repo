@@ -12,6 +12,7 @@
 Game Statistics
 </title>
 <script>
+
 //
 create button element 
 //
@@ -20,7 +21,7 @@ document.innerHtml("Add game");
 
 // Create a ul element to hold the list of games
 
-const gameList = document.createElement("ul");
+const gameList =  document.createElement("ul");
 document.body.appendChild(gameList);
 
 // Function to add a game to the list
@@ -29,6 +30,7 @@ function addGame()
 {
   const gameName = prompt("Enter the name of the game:");
 
+
  if(gameName)
  {
       const listItem =       document.createElement("li");
@@ -36,15 +38,12 @@ function addGame()
    gameList.appendChild(listItem);
 
 }
-
 console.log("gameName");
 }
-
 </script>
+
 <body>
-
 <div id = "container"> 
-
 <img src= "Tekken8.jpg">
 <img src="callofdragon.png">
 </div>
@@ -53,14 +52,14 @@ console.log("gameName");
 <img src="MechArena (1).png">
 <img src="Streetfighter.png">
 </div>
-
 <p>
-
 call of dragons 
 </p> 
 </div>
+
 //new dialog for gamers
 <style>
+
  /* Basic styling for the dialog box */
         dialog
  
@@ -91,14 +90,21 @@ call of dragons
 View Gamer
 </button>
 <header>
-<section id = "dialog" >
+<section id = "dialog">
+
   <h2>Gamers Online</h2>
+
     <ul id="gamersList">
+
      <!-- List will be populated with JavaScript -->
   </ul>
+
   <button onclick="closeDialog()">
+
 Close 
+
 </button>
+
 </dialog>
 <script>
 function showGamersDialog() 
@@ -129,7 +135,6 @@ vi
      list.appendChild(item);
   
 });
-
 console.log(document.getElementById.innerHtml("GamersList"));
 console.log(document.getElementById.innerHtml("GamersDialog"));
 dialog.showModal();
