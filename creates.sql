@@ -32,3 +32,4 @@ into table character;
 insert video_character (varchar (16) values ("ettu") values (78) into table 
 characters;
 insert  video_character["", varchar (45 ) values (677) ] ;
+insert row no_changein_primary[" "];
