@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Table</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px;
+        }
+        table img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Game Table</h1>
+        <form id="gameForm" class="mb-3">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="gameName">Game Name</label>
+                    <input type="text" class="form-control" id="gameName" placeholder="Enter game name" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="gameScore">Game Score</label>
+                    <input type="number" class="form-control" id="gameScore" placeholder="Enter score" required>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="gameImage">Game Image URL</label>
+                    <input type="url" class="form-control" id="gameImage" placeholder="Enter image URL" required>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add to Table</button>
+        </form>
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Game Name</th>
+                    <th>Score</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody id="gameTableBody">
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const gameForm = document.getElementById('gameForm');
+        const
