@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamers and Streams</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .game-images img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin: 10px;
+        }
+        iframe {
+            border: 3px solid green;
+            border-radius: 8px;
+        }
+        .iframe-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center">
+        <h1>Welcome to the Gamers Page</h1>
+        <p>Explore game streams and more!</p>
+    </header>
+
+    <section class="game-images text-center">
+        <h2>Game Images</h2>
+        <img src="callofdragons.jpg" alt="Call of Dragons">
+        <img src="streetfighter4.jpg" alt="Street Fighter 4">
+        <img src="Streetfighter.png" alt="Street Fighter">
+        <!-- Add more images here -->
+    </section>
+
+    <section class="iframe-container">
+        <h2>Game Stream</h2>
+        <iframe src="http://127.0.0.1:8080" width="600" height="400" allow="autoplay; encrypted-media" title="Game Stream"></iframe>
+        <!-- Add more iframes here -->
+    </section>
+
+    <footer class="text-center">
+        <p>© 2025 Gamers Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
