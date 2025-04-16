@@ -13,17 +13,18 @@
 Open Dialog </button>
 
 <div id="container",style= bgcolor : red, border :4 px, gray ,metal,width=100 , height=100>
-
 <img src="MechArena.jpg", alt="MechArena" ,width=100% ,height=100px, margin=3,3 padding=3,3 em>
+
 <img src ="Galaxiaga.png", alt= "Galaxiaga.png" width=100%, height=100px; padding:3,3,margin="3,3" >
 </div>
       <p> 
         to display games new installed
       </p>
+
       <frame>
-        <img src="Mecharena (1).jpg", width="56" height="56" ,onclick="onpress()";alt="mecharena" >
-        <text>Mecharena</text>
-        </img>
+        <img src="Mecharena (1).jpg", width="56" height="56",onclick="onpress()";alt="mecharena">
+  <text>Mecharena</text>
+  </img>
 </frame>
         <form>
           <table>
@@ -53,9 +54,9 @@ game
       </frame>
     </div>
   </head1>
-  <h1>
+ <h1>
     games list 
-  </h1>
+ </h1>
   <head2> 
     <h2> 
       the new games are way better
@@ -65,9 +66,11 @@ game
 </h>
   </head2>
 <div id ="window" style=body-color="black",resize=auto, animation="glitter" , border= 2, 3 , "black" solid, margin="black", padding="3,3", border-style="line" >
+
  <div id="dropzone", style="width:100%; height:100px; border:2px dashed #ccc; text-align:center; line-height:100px;">
   </div>
 </div>
+
 <wbr>
 <head3> 
     <meta charset="UTF-8">
@@ -91,7 +94,6 @@ game
        }
     </style>
 </head3>
-
     <h2>Gamers Table</h2>
     <table id="gamersTable">
         <thead>
@@ -102,23 +104,26 @@ game
 <tr>
 <td>NAME OF GAME</td>
 </tr>
-    <script src="gamers.js">
+<script src="gamers.js">
 // gamers.js
 // Sample data for gamers
 const gamers =
  [
-    { 
+ { 
 name: 'new ', age: 25, favoriteGame: 'Galaxiaga'.  
 }
    ,
-
-    { name: 'jonah', age: 22, favoriteGame: 'mech Arena' },
+    { 
+name: 'jonah', age: 22, favoriteGame: 'mech Arena' 
+},
    }
 ];
 // Function to populate the table with gamers' data
-function populateGamersTable() {
+function populateGamersTable()
+ {
     const tableBody = document.querySelector('#gamersTable tbody');
-    gamers.forEach(gamer => {
+    gamers.forEach(gamer => 
+{
         const row = document.createElement('tr');
         const nameCell = document.createElement('td');
         nameCell.textContent = gamer.name;
@@ -132,11 +137,15 @@ function populateGamersTable() {
         tableBody.appendChild(row);
     });
 }
+
 // Call the function to populate the table when the page loads
 document.addEventListener('DOMContentLoaded', populateGamersTable);
 </script>
+
 <footer style= background-color: black,padding : 2,3px >
+
   <div id = "footer">
+
     <a href="https://facebook.com">Facebook</a>
     <a href="https://instagram.com">Instagram</a>
     <a href="https://linkedin.com">LinkedIn</a>
@@ -148,7 +157,9 @@ document.addEventListener('DOMContentLoaded', populateGamersTable);
 console.log(document.getElementById("dialogbox").querySelector("img[src='Mecharena.jpg']")); console.log(document.getElementById("dialogbox").querySelector("img[src='galaxiaga.jpg']"));
   } 
   </script>
+
 <script>
+
 const dropzone = document.getElementById('dropzone');
 dropzone.addEventListener('dragover', (event) => {
   event.preventDefault();
@@ -159,6 +170,7 @@ dropzone.addEventListener('drop',(event) => {
   // Process the files here
 });>
 </script>
+
   <style>
   head1
 {
@@ -167,7 +179,6 @@ bgcolor: brown;
 text-color="orange"; 
 margin: 2,3 em; 
 }
-
 head2
 {
 margin=2,2 em;
@@ -189,6 +200,7 @@ bgcolor: brown;
 text-color="orange";
  }
 
+
 h{
 bgcolor:brown;
 font-style: Italics;
@@ -197,6 +209,7 @@ font-size:78 px ;
 text-align: "centre";
 margin: 5,5,px;
 }
+
   body
 {
 bgcolor="brown"; border :  rounded solid 5px;
@@ -206,6 +219,7 @@ background-color: brown;
 padding="rounded";
 
 }
+
   </style>
 </head>
 </body>
