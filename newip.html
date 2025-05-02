@@ -70,7 +70,114 @@
             <a href="https://linkedin.com" target="_blank" class="btn btn-secondary"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
     </div> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Data Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        caption {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Table Example</h1>
+    <table>
+        <caption>Sample Data Table</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Item</th>
+                <th>Category</th>
+                <th>Price ($)</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Keyboard</td>
+                <td>Electronics</td>
+                <td>49.99</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Gaming Mouse</td>
+                <td>Electronics</td>
+                <td>29.99</td>
+                <td>Out of Stock</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Office Chair</td>
+                <td>Furniture</td>
+                <td>89.99</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Monitor</td>
+                <td>Electronics</td>
+                <td>199.99</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Desk Lamp</td>
+                <td>Lighting</td>
+                <td>19.99</td>
+                <td>Out of Stock</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
     <!-- FontAwesome for social media icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
