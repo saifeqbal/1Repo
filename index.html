@@ -59,7 +59,7 @@ games
 .html">bpag
 </p>
 </a> 
-<p class= card "b><a href ="article list.htm">
+<p class= card"><a href ="article list.htm">
  <h style = background = black , text-color="green" , font-color="Black", text-align="center", background-colour =" black",font-size="40px">
 </h>
 </a>
@@ -68,14 +68,13 @@ games
 </head>
 </body>
 </html>
-
 <!DOCTYPE html>
 <html lang="en">
 <head style=border-style="rounded"; background-color= "brown";>
   <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width", initial-scale=1.0">
     <title>Gamer Profile</title>
-    <link rel="stylesheet",href="newsyle.css">
+    <link rel="stylesheet", href="newsyle.css">
 </head>
 <body>
     <header>
@@ -87,14 +86,15 @@ games
     </section>
     <section id="gallery">
         <h2>Gallery</h2>
-        <div class="gallery">
-            <img src = "streetfighter4.jpg"; alt="street fighter",height ="100",width="100">
+   <div class="gallery">
+            <img src = "streetfighter4.jpg"; alt="street fighter", height ="100",width="100">
 </img>
 <img src="callofdragons.jpg";
- width ="100",height="100">
+ width ="100", height="100" >
 </img>
            <img src ="tekken8.jpg"; alt="tekken",width ="150",height="150";>
 </img>
+
 <style>
 .galery
 { 
@@ -102,18 +102,20 @@ border:2px;
 width : 100 %;
  height: 100%;
 }
-.gallery img {
+.gallery img 
+{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .p
 {
 }
- header{
+ header
+{
 background-color="black";
 }
 section
@@ -121,14 +123,10 @@ section
 background-color="black" ;
 }
   </style>
-
  </div>
     </section>
-
     <section id="contact">
-
         <h2>Contact</h2>
-
         <form
 method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
             <label for="name">Name:</label>
