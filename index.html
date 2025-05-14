@@ -30,7 +30,8 @@ align= center ,font-style="Italics">
 </p>
 </link>
 
-<h id ="text",background-color= black,font-size = 60 , text-style="highlight" , text-align="center" , font-style="Italics",font-color= "orange";>
+<h id ="text", 
+background-color= black,font-size = 60 , text-style="highlight" , text-align="center" , font-style="Italics",font-color= "orange";>
 <a href="page.html" , alt = "link2" text-align:"center" ,align: "centre" >page
 </a>
 </h>
@@ -139,9 +140,10 @@ background-color="black";
  </div>
     </section>
     <section id="contact">
-        <h2>Contact</h2>
+        <h2>Contact </h2>
    <form
-method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+method="post" action="
+<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
             <label for="email">Email:</label>
@@ -149,8 +151,7 @@ method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
             <label for="message">Message:</label>
  <textarea id="message" name="message" required>
 </textarea>
-     <button type="submit",font-color="brown">
-Send
+     <button type="submit",font-color="brown">Send
 </button>
 </form>
 <?php 
