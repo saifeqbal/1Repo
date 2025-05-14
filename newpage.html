@@ -1,48 +1,62 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gamer's Data Hat</title>
+    <title>Gamer's Data Hub</title>
     <style>
-        body 
-{
+        /* General Body Styling */
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #2c3e50;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
             color: #ecf0f1;
             margin: 0;
             padding: 0;
         }
 
+        /* Header Styling */
         h1 {
             text-align: center;
             padding: 20px;
             background-color: #34495e;
             margin: 0;
+            color: #ecf0f1;
+            font-size: 2.5rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
         }
+
+        /* Container Styling */
         .container {
             width: 90%;
             margin: auto;
-            padding: 20px;
+            padding: 20px 10px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
         }
 
+        /* Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #34495e;
             margin-bottom: 20px;
+            background-color: #34495e;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
         }
 
         th, td {
             border: 1px solid #2c3e50;
-            padding: 8px;
+            padding: 12px;
             text-align: left;
+            color: #ecf0f1;
         }
 
         th {
             background-color: #2980b9;
             color: white;
+            font-size: 1.2rem;
         }
 
         tr:nth-child(even) {
@@ -51,33 +65,55 @@
 
         tr:hover {
             background-color: #3498db;
+            transition: background-color 0.3s ease;
         }
 
+        /* Section Header Styling */
+        h2 {
+            color: #ecf0f1;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+
+        /* Responsive Table for Small Screens */
         @media (max-width: 600px) {
-            table, thead, tbody, th, td, tr { 
-                display: block; 
+            table, thead, tbody, th, td, tr {
+                display: block;
             }
-            thead tr { 
+
+            thead tr {
                 position: absolute;
                 top: -9999px;
                 left: -9999px;
             }
-            tr { 
+
+            tr {
                 margin-bottom: 10px;
+                box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                overflow: hidden;
             }
-            td { 
+
+            td {
                 border: none;
+                padding: 10px;
+                background-color: #34495e;
                 position: relative;
-                padding-left: 50%; 
+                padding-left: 50%;
             }
-            td:before { 
+
+            td:before {
                 position: absolute;
-                top: 6px;
-                left: 6px;
-                width: 45%; 
-                padding-right: 10px; 
+                top: 10px;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
                 white-space: nowrap;
+                color: #bdc3c7;
+                font-weight: bold;
             }
+
             td:nth-of-type(1):before { content: "Game"; }
             td:nth-of-type(2):before { content: "Genre"; }
             td:nth-of-type(3):before { content: "Platform"; }
@@ -87,122 +123,76 @@
     </style>
 </head>
 <body>
-<h1>Gamer's Data Hub</h1>
-<div class="container">
-    <h2>Top Games of 2025</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Game</th>
-                <th>Genre</th>
-                <th>Platform</th>
-                <th>Release Date</th>
-                <th>Rating</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Mech arena</td>
-                <td>Sci-Fi RPG</td>
-                <td>Android
-                    </td>
-                <td>Jan 15, 2024</td>
-                <td>9.4/10</td>
-            </tr>
-            <tr>
-                <td>Tekken</td>
-                <td>Fantasy MMORPG</td>
-                <td>Android</td>
-                <td>january 2024</td>
-                <td>8.9/10</td>
-            </tr>
-            <tr>
-                <td>Street fighter 4</td>
-                <td>Fighter Rpg</td>
-                <td>android</td>
-                <td>January</td>
-                <td>5star</td>
-            </tr>
-            <tr>
-                <td>CALL OF DRAGONS</td>
-                <td>Adventure, Puzzle</td>
-                <td>android</td>
-                <td>January</td>
-                <td>8.6/10</td>
-            </tr>
-        </tbody>
-    </table>
-    <h2>Upcoming Game Releases just for stream</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Game</th>
-                <th>Genre</th>
-                <th>Platform</th>
-                <th>Expected Release</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Devil May cry</td>
-                <td>Fighter, Survival</td>
-                <td>Android</td>
-                <td>Q1 for stream</td>
-            </tr>
-            <tr>
-                <td>Downhill racer</td>
-                <td>Strategy, Time Travel</td>
-                <td>Strategic, android</td>
-                <td>some time</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-</body>
-</html>
+    <h1>Gamer's Data Hub</h1>
+    <div class="container">
+        <h2>Top Games of 2025</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Genre</th>
+                    <th>Platform</th>
+                    <th>Release Date</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mech Arena</td>
+                    <td>Sci-Fi RPG</td>
+                    <td>Android</td>
+                    <td>Jan 15, 2024</td>
+                    <td>9.4/10</td>
+                </tr>
+                <tr>
+                    <td>Tekken</td>
+                    <td>Fantasy MMORPG</td>
+                    <td>Android</td>
+                    <td>January 2024</td>
+                    <td>8.9/10</td>
+                </tr>
+                <tr>
+                    <td>Street Fighter 4</td>
+                    <td>Fighter RPG</td>
+                    <td>Android</td>
+                    <td>January</td>
+                    <td>5 stars</td>
+                </tr>
+                <tr>
+                    <td>Call of Dragons</td>
+                    <td>Adventure, Puzzle</td>
+                    <td>Android</td>
+                    <td>January</td>
+                    <td>8.6/10</td>
+                </tr>
+            </tbody>
+        </table>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SVG Character View</title>
-    <style>
-        body 
-{
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-   }
-        .container 
-{
-            text-align: center;
-        }
-        svg {
-            width: 200px;
-            height: 200px;
-        }
-    </style>
-</head>
-</body>
-</html>
-
-  <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Gamers Log</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-  <script src="gamers_log.js"></script>
-<body>
-  <script src="script.js">
-</script>
+        <h2>Upcoming Game Releases for Stream</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Genre</th>
+                    <th>Platform</th>
+                    <th>Expected Release</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Devil May Cry</td>
+                    <td>Fighter, Survival</td>
+                    <td>Android</td>
+                    <td>Q1 2025</td>
+                </tr>
+                <tr>
+                    <td>Downhill Racer</td>
+                    <td>Strategy, Time Travel</td>
+                    <td>Android</td>
+                    <td>Q2 2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
