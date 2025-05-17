@@ -41,7 +41,39 @@
             <!-- Video Player -->
             <section>
                 <h2>Video Player</h2>
-   <video "player" src= "" ,controls: pay, pause, volume stop , width: auto ,>
-<video src="",controls player >
+   <div class ="player" , id = "player", src= "" , controls. : play, pause, volume stop , width: auto ,>
+<video src="" , controls player play>
 </video>
-<>
+<div class="video-player-container">
+        <h1>Custom Video Player</h1>
+        <video id="videoPlayer" controls>
+   <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button onclick="playVideo()">Play</button>
+            <button onclick="pauseVideo()">Pause</button>
+            <button onclick="restartVideo()">Restart</button>
+        </div>
+    </div>
+    <script>
+        // Select the video element
+        const video = document.getElementById('videoPlayer');
+
+        // Play the video
+        function playVideo() {
+            video.play();
+        }
+
+        // Pause the video
+        function pauseVideo()
+ {
+            video.pause();
+        }
+
+        // Restart the video
+        function restartVideo() {
+            video.currentTime = 0;
+            video.play();
+        }
+    </script>>
