@@ -4,83 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Player Webpage</title>
-    <link rel="stylesheet",href="styles.css">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height:  .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-    <h1>Welcome to the Player Webpage</h1>
+            <h1>Welcome to the Player Webpage</h1>
         </header>
-    <main>
-     <section class="player-container">
-      <h2>Player</h2>
-  <video id="player" controls  play stop pause >
-   <source src="https://www.dropbox.com/scl/fi/xay73rzgz9i13497ha9sv/screen-20250412-233946.mp4?rlkey=n3vqbay1212ux258arcemmfg4&st=jv0lti3t&dl=0" 
-controls player>
-     Your browser does not support the video tag.
-    </video>
-            </section>
-     <section class="description-container">
-                <h2>The Description</h2>
-                <p> o.</p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2023 Player Webpage. All rights reserved.</p>
-        </footer>
-    </div>
-    <script src="script.js">
-</script>
-</body>
-</html>
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-} 
-.container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
-    text-align: center;
-}
+        <main>
+            <!-- Video Player -->
+            <section>
+                <h2>Video Player</h2>
+                < responsive styling.
 
-header {
-    margin-bottom: 20px;
-}
+3. **Fallback Content**:
+   - Added the text `Your browser does not support the video tag.` to ensure users without HTML5-compatible browsers see a fallback message.
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+---
 
-.player-container, .description-container {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 100%;
-    text-align: left;
-}
+### How to Use:
+1. Save the updated file as `media.html`.
+2. Place the video file (`sample-video.mp4`) in the same directory as `media.html`.
+3. Open the file in a modern browser to view the video player.
 
-.player-container video {
-    width: 100%;
-    height: auto;
-}
-
-footer {
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #666;
-}
-</style>
+Let me know if you need further updates or additional features!
