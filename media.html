@@ -42,7 +42,7 @@
             <section>
                 <h2>Video Player</h2>
    <div class ="player" , id = "player", src= "https://www.dropbox.com/scl/fi/99blddisxynnmcjs4t40p/screen-20240517-233303.mp4?rlkey=nujhfbiqk999zag1w6ovpa4fa&st=wt8a1tnk&dl=0" , controls. : play, pause, volume stop , width: auto ,>
-<video src="https://github.com/saifeqbal/1Repo/blob/main/Video%2Fscreen-20250516-204034.mp4" , controls player play>
+<video src="" , controls player play>
 </video>
 <div class="video-player-container">
         <h1>Custom Video Player</h1>
@@ -50,6 +50,7 @@
    <source src=" https://www.dropbox.com/scl/fi/99blddisxynnmcjs4t40p/screen-20240517-233303.mp4?rlkey=nujhfbiqk999zag1w6ovpa4fa&st=wt8a1tnk&dl=0" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
         <div class="controls">
             <button onclick="playVideo()">Play</button>
             <button onclick="pauseVideo()">Pause</button>
@@ -61,19 +62,21 @@
         const video = document.getElementById('videoPlayer');
 
         // Play the video
-        function playVideo() {
+        function playVideo() 
+{
             video.play();
-        }
+ }
 
         // Pause the video
         function pauseVideo()
  {
             video.pause();
-        }
+ }
 
         // Restart the video
-        function restartVideo() {
+        function restartVideo() 
+{
             video.currentTime = 0;
             video.play();
-        }
+}
     </script>>
