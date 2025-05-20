@@ -11,8 +11,11 @@ update table character stats{
 column character name  char (16) values (Jennifer, Lena);
 row ["ornaments" char 64 values (handbrace,necklaces )];
 }
+
 select character name from gamerstats;
+
 select oldr from gamestats if oldr values 19;
+
 select ornaments from [character stats];
 //
 create table character 
@@ -32,4 +35,4 @@ into table character;
 insert video_character (varchar (16) values ("ettu") values (78) into table 
 characters;
 insert  video_character["", varchar (45 ) values (677) ] ;
-insert row no_changein_primary[" "];
+insert row no_changein_primary[""];
