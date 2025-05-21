@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Upload</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input[type="file"] {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 16px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your Documents</h1>
+        <form id="uploadForm">
+            <label for="fileInput">Choose a document to upload:</label>
+            <input type="file" id="fileInput" name="document" accept=".pdf,.doc,.docx,.txt" required>
+            <button type="submit">Upload</button>
+        </form>
+        <p class="message" id="message"></p>
+    </div>
+
+    <script>
+        // Get form and message elements
+        const uploadForm = document.getElementById('uploadForm');
+        const message = document.getElementById('message');
+
+        // Handle form submission
+        uploadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                // Display success message
+                message.textContent = `File "${file.name}" uploaded successfully!`;
+            } else {
+                // Display error message
+                message.textContent = "Please select a file to upload.";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
+
+<svg>
+canvas src = ctx x:4  
+y: 5> 
+
+</svg>
