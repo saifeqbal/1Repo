@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Upload and Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        input[type="file"] {
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Upload and Viewer</h1>
+        <form id="pdfForm">
+            <label for="pdfInput">Upload a PDF file:</label>
+            <input type="file" id="pdfInput" accept="application/pdf" required>
+            <p class="error" id="errorMessage"></p>
+            <button type="submit">View PDF</button>
+        </form>
+        <iframe id="pdfViewer" src="" style="display: none;"></iframe>
+    </div>
+
+    <script>
+        const pdfForm = document.getElementById('pdfForm');
+        const pdfInput = document.getElementById('pdfInput');
+        const pdfViewer = document.getElementById('pdfViewer');
+        const errorMessage = document.getElementById('errorMessage');
+
+        pdfForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const file = pdfInput.files[0];
+            if (file) {
+                if (file.type === "application/pdf") {
+                    const fileURL = URL.createObjectURL(file);
+                    pdfViewer.src = fileURL;
+                    pdfViewer.style.display = "block";
+                    errorMessage.textContent = ""; // clear any error messages
+                } else {
+                    errorMessage.textContent = "Please upload a valid PDF file.";
+                    pdfViewer.style.display = "none";
+                }
+            } else {
+                errorMessage.textContent = "No file selected. Please choose a PDF file.";
+                pdfViewer.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
