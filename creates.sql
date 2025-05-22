@@ -5,7 +5,9 @@ insert into table gamestats;
 row ["cream"], fil varchar (10), values (39)];
 row ["olodr"] varchar (19), values (19, 39 59);
 row ["color"]  VARCHAR(32)  VALUES (PINK, RED);
+
 column [charactername ] char 64 values (Jennifer) (Helena);
+
 column character size character [128] values (16 ,3,128);
 update table character stats{
 column character name  char (16) values (Jennifer, Lena);
@@ -31,8 +33,9 @@ insert video character[" binny  " varchar (32) values ( "25,32 56"), ];
 insert videocharacter[" "] into table  character
 ;
 insert video character(varchar(16 ) values ("cee") )
-into table character; 
+into table character ; 
 insert video_character (varchar (16) values ("ettu") values (78) into table 
 characters;
 insert  video_character["", varchar (45 ) values (677) ] ;
 insert row no_changein_primary[""];
+
