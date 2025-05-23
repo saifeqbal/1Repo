@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player Webpage</title>
+    <title>Video Player Webpage</title>
     <style>
         /* General Body Styling */
-        body 
-{
+        body {
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
             margin: 0;
@@ -15,7 +14,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height:  .container {
+            min-height: 100vh;
+        }
+        .container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
@@ -31,80 +32,68 @@
             border: 2px solid #ccc;
             margin-bottom: 20px;
         }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        .controls button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-  <header>
-
-       <h1>Welcome to the Player Webpage</h1>
+        <header>
+            <h1>Welcome to the Video Player Webpage</h1>
         </header>
         <main>
-   <!-- Video Player -->
-    <section>
-    <h2>Video Player</h2>
-   <div class =  "video " , id = "video" ,  src = "https://dai.ly/x9jewm4", controls : play,  pause, volume stop , width: auto height>
-<video src= 
-" https://video.sidh.bzh/w/gBY636pMq6zMTz18kdsf7J" 
-> 
-</video>
-
-<video src=
-"https://dai.ly/x9jewm4",
-
-controls player play stop pause volume up volume down picture brightness volume bar>
-
-</video>
-
-<div class="video-player-container">
-        <h1>Custom Video Player</h1>
-  <video id="videoPlayer" controls>
-   <source src="https://videos.pair2jeux.tube/videos/watch/1f276adf-b3e8-466b-876b-020ad21d8847" type>
-  Your browser does not support the video tag.
-  </video>
-<video src = https://videos.pair2jeux.tube/videos/watch/1f276adf-b3e8-466b-876b-020ad21d8847" style controls play pause stop>
-
-<video src ="https://videos.pair2jeux.tube/videos/watch/1f276adf-b3e8-466b-876b-020ad21d8847",controls play pause stop volume>
-
-<src=" https://www.youtube.com/watch?v=M1NXzgaeKx0"
-</source>
-</video>
-<p>Describes the introduction 
-  <div class="controls">
-    <button onclick="playVideo()"></button>
-     <button onclick="pauseVideo()"></button>
-  <button onclick="restartVideo()"></button>
-        </div>
+            <!-- Video Player -->
+            <section>
+                <h2>Custom Video Player</h2>
+                <video id="videoPlayer" controls>
+                    <source src="https://videos.pair2jeux.tube/videos/watch/1f276adf-b3e8-466b-876b-020ad21d8847" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="controls">
+                    <button onclick="playVideo()">Play</button>
+                    <button onclick="pauseVideo()">Pause</button>
+                    <button onclick="restartVideo()">Restart</button>
+                </div>
+            </section>
+        </main>
     </div>
 
-<img src="">
-<script>
-
+    <script>
         // Select the video element
         const video = document.getElementById('videoPlayer');
 
         // Play the video
-        function playVideo() 
-{
+        function playVideo() {
             video.play();
- }
+        }
 
-    // Pause the video
-        function pauseVideo()
- {
+        // Pause the video
+        function pauseVideo() {
             video.pause();
- }
+        }
 
         // Restart the video
-        function restartVideo() 
-{
+        function restartVideo() {
             video.currentTime = 0;
             video.play();
-}
+        }
     </script>
-<video src ="> 
-<source= "">
-</suorce>
 
-</video >
+</body>
+</html>
