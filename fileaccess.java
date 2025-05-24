@@ -2,7 +2,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-
 public class DatabaseAccess 
 {
     public static void main(String[] args)
@@ -16,7 +15,8 @@ username, and password
 
         // SQL query to execute
         String query = "SELECT * FROM women"; // Replace "women" with your table name
-   try
+   
+try
  {
             // Step 1: Load the JDBC driver (optional for modern Java versions) Class.forName("com.mysql.cj.jdbc.Driver"); // MySQL JDBC Driver
             // Step 2: Establish a connection
