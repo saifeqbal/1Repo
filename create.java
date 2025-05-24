@@ -80,4 +80,37 @@ http://maven.apache.org/POM/4.0.0<project xmlns="http://maven.apache.org/POM/4.0
         <!-- Add dependencies here -->
     </dependencies>
 
-</project>
+</project>import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class FileAccess {
+    public static void main(String[] args) {
+        // Specify the path to the file you want to access
+        String filePath = "example.txt"; // Replace with your file path
+
+        // Try to open and read the file
+        try {
+            File file = new File(filePath);
+            Scanner fileScanner = new Scanner(file);
+
+            System.out.println("Reading file: " + file.getName());
+            System.out.println("--------------------------------");
+
+            // Read and print file content line by line
+            while (fileScanner.hasNextLine()) {
+                String line = fileScanner.nextLine();
+                System.out.println(line);
+            }
+
+            // Close the file scanner
+            fileScanner.close();
+            System.out.println("--------------------------------");
+            System.out.println("File read successfully!");
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + filePath);
+            System.out.println("Please check the file path and try again.");
+        }
+    }
+}
