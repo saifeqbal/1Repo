@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-box {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            width: 300px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .image-box p {
+            margin: 10px 0 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Viewer</h1>
+    <div class="image-container">
+        <!-- Image 1 -->
+        <div class="image-box">
+            <img src="https://via.placeholder.com/300" alt="Sample Image 1">
+            <p>Sample Image 1</p>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="image-box">
+            <img src="https://via.placeholder.com/300" alt="Sample Image 2">
+            <p>Sample Image 2</p>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="image-box">
+            <img src="https://via.placeholder.com/300" alt="Sample Image 3">
+            <p>Sample Image 3</p>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="image-box">
+            <img src="https://via.placeholder.com/300" alt="Sample Image 4">
+            <p>Sample Image 4</p>
+        </div>
+    </div>
+</body>
+</html>
