@@ -534,7 +534,7 @@ body {
 }
 header {
     background-color: $primary-color;
-    color: #666;
+    color: white;
     padding: 1rem 0;
 
     nav ul {
