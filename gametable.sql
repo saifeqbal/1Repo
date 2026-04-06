@@ -24,6 +24,7 @@ values("2" ), ("enu")];
 insert row ["fotm", varchar(53), values ("nbr"),("noh"), ("noutr") ]; 
  into table  insert row ["ters",varchar("256"), into table [];
 insert table [("gametableusers")] into database ["gametableusers"];
+INSERT COLUMN pencil INTO table(gametableuser) VALUES ("apsr")
 
 //html//
 <!DOCTYPE html>
