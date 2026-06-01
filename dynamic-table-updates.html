@@ -254,7 +254,7 @@
                         id: editingId,
                         name,
                         email,
-                        department,
+                        Game,
                         salary
                     };
                 }
@@ -266,7 +266,7 @@
                     id: newId,
                     name,
                     email,
-                    department,
+                    Game,
                     salary
                 });
             }
@@ -326,7 +326,7 @@
                     <td>${row.id}</td>
                     <td>${row.name}</td>
                     <td>${row.email}</td>
-                    <td>${row.department}</td>
+                    <td>${row.Game}</td>
                     <td>$${parseFloat(row.salary).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
                     <td>
                         <div class="action-buttons">
