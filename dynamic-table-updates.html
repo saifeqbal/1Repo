@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Updates</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #5568d3;
+        }
+
+        button.delete {
+            background-color: #ff6b6b;
+            padding: 8px 15px;
+            font-size: 12px;
+        }
+
+        button.delete:hover {
+            background-color: #ee5a52;
+        }
+
+        button.edit {
+            background-color: #ffa500;
+            padding: 8px 15px;
+            font-size: 12px;
+        }
+
+        button.edit:hover {
+            background-color: #ff8c00;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background-color: #667eea;
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:hover {
+            background-color: #f0f0f0;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 16px;
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .form-group {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            select,
+            button {
+                width: 100%;
+            }
+
+            .form-group {
+                flex-direction: column;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Dynamic Table Manager</h1>
+        
+        <div class="success-message" id="successMessage">Record added/updated successfully!</div>
+
+        <div class="controls">
+            <div class="form-group">
+                <input type="text" id="nameInput" placeholder="Enter Name" required>
+                <input type="email" id="emailInput" placeholder="Enter Email" required>
+                <input type="text" id="departmentInput" placeholder="Enter Department" required>
+                <input type="number" id="salaryInput" placeholder="Enter Salary" required>
+                <button onclick="addOrUpdateRow()">Add/Update</button>
+                <button onclick="resetForm()" style="background-color: #6c757d;">Reset</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr class="empty-state">
+                        <td colspan="6">No data available. Add a record to get started!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let tableData = JSON.parse(localStorage.getItem('tableData')) || [];
+        let editingId = null;
+
+        // Initialize table on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTable();
+        });
+
+        function addOrUpdateRow() {
+            const name = document.getElementById('nameInput').value.trim();
+            const email = document.getElementById('emailInput').value.trim();
+            const department = document.getElementById('departmentInput').value.trim();
+            const salary = document.getElementById('salaryInput').value.trim();
+
+            if (!name || !email || !department || !salary) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            if (editingId !== null) {
+                // Update existing row
+                const index = tableData.findIndex(item => item.id === editingId);
+                if (index !== -1) {
+                    tableData[index] = {
+                        id: editingId,
+                        name,
+                        email,
+                        department,
+                        salary
+                    };
+                }
+                editingId = null;
+            } else {
+                // Add new row
+                const newId = tableData.length > 0 ? Math.max(...tableData.map(item => item.id)) + 1 : 1;
+                tableData.push({
+                    id: newId,
+                    name,
+                    email,
+                    department,
+                    salary
+                });
+            }
+
+            // Save to localStorage
+            localStorage.setItem('tableData', JSON.stringify(tableData));
+
+            // Show success message
+            showSuccessMessage();
+
+            // Reset form and re-render
+            resetForm();
+            renderTable();
+        }
+
+        function editRow(id) {
+            const row = tableData.find(item => item.id === id);
+            if (row) {
+                document.getElementById('nameInput').value = row.name;
+                document.getElementById('emailInput').value = row.email;
+                document.getElementById('departmentInput').value = row.department;
+                document.getElementById('salaryInput').value = row.salary;
+                editingId = id;
+
+                // Scroll to form
+                document.querySelector('.controls').scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function deleteRow(id) {
+            if (confirm('Are you sure you want to delete this record?')) {
+                tableData = tableData.filter(item => item.id !== id);
+                localStorage.setItem('tableData', JSON.stringify(tableData));
+                renderTable();
+                showSuccessMessage('Record deleted successfully!');
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('nameInput').value = '';
+            document.getElementById('emailInput').value = '';
+            document.getElementById('departmentInput').value = '';
+            document.getElementById('salaryInput').value = '';
+            editingId = null;
+        }
+
+        function renderTable() {
+            const tableBody = document.getElementById('tableBody');
+
+            if (tableData.length === 0) {
+                tableBody.innerHTML = '<tr class="empty-state"><td colspan="6">No data available. Add a record to get started!</td></tr>';
+                return;
+            }
+
+            tableBody.innerHTML = tableData.map(row => `
+                <tr>
+                    <td>${row.id}</td>
+                    <td>${row.name}</td>
+                    <td>${row.email}</td>
+                    <td>${row.department}</td>
+                    <td>$${parseFloat(row.salary).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="edit" onclick="editRow(${row.id})">Edit</button>
+                            <button class="delete" onclick="deleteRow(${row.id})">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function showSuccessMessage(message = 'Record added/updated successfully!') {
+            const successMessage = document.getElementById('successMessage');
+            successMessage.textContent = message;
+            successMessage.style.display = 'block';
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        }
+
+        // Allow Enter key to submit form
+        document.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter' && (
+                event.target.id === 'nameInput' ||
+                event.target.id === 'emailInput' ||
+                event.target.id === 'departmentInput' ||
+                event.target.id === 'salaryInput'
+            )) {
+                addOrUpdateRow();
+            }
+        });
+    </script>
+</body>
+</html>
